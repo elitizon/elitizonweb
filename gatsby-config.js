@@ -44,17 +44,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        postCssPlugins: [require("tailwindcss")]
-      }
+        postCssPlugins: [require("tailwindcss")],
+      },
     },
     {
-      resove: `gatsby-plugin-purgecss`,
+      resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: false,
         develop: false,
         tailwind: true,
       }
     }
-
   ],
 }
