@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "gatsby develop -p 9988 -o",
+    "build": "gatsby build",
+    "serve": "gatsby serve -p 9500 -o",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Raphaël MANSUY",
+  "license": "MIT",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
@@ -17,6 +19,7 @@
     "gatsby": "^2.24.23",
     "gatsby-image": "^2.4.14",
     "gatsby-plugin-mdx": "^1.2.30",
+    "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.6.24",
     "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-remark-images": "^3.3.24",
@@ -25,7 +28,9 @@
     "prism-react-renderer": "^1.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "react-live": "^2.2.2",
+    "react-seo-component": "^2.0.2",
     "styled-components": "^5.1.1"
   }
 }
