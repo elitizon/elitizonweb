@@ -41,5 +41,20 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: { path: `${__dirname}/posts`, name: `posts` },
     },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require("tailwindcss")]
+      }
+    },
+    {
+      resove: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: false,
+        develop: false,
+        tailwind: true,
+      }
+    }
+
   ],
 }
