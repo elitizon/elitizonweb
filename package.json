@@ -1,12 +1,14 @@
 {
-  "name": "ElitizonWeb",
+  "name": "Elitizon Web",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "yarn dev",
     "dev": "gatsby develop -p 9988 -o",
     "build": "gatsby build",
     "serve": "gatsby serve -p 9500 -o",
+    "clean": "gatsby clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
