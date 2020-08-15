@@ -1,12 +1,12 @@
 const siteMetadata = {
-  title: `The Localhost Blog`,
-  description: `This is my coding blog where I write about my coding journey.`,
+  title: `Elitizon Limited Corporate WebSite`,
+  description: `Elitizon Corporate WebSite.`,
   image: `/default-site-image.jpg`,
-  siteUrl: `https://thelocalhost.blog`,
+  siteUrl: `https://elitizon.com`,
   siteLanguage: `en-GB`,
   siteLocale: `en_gb`,
-  twitterUsername: `@spences10`,
-  authorName: `Scott Spence`,
+  twitterUsername: `@elitizon_ltd`,
+  authorName: `Elitizon`,
 }
 
 module.exports = {
