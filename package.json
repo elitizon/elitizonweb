@@ -1,5 +1,5 @@
 {
-  "name": "Elitizon Web",
+  "name": "ElitizonWeb",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
@@ -36,7 +36,8 @@
     "react-helmet": "^6.1.0",
     "react-live": "^2.2.2",
     "react-seo-component": "^2.0.2",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "twin.macro": "^1.7.0"
   },
   "devDependencies": {
     "tailwindcss": "^1.6.2"
