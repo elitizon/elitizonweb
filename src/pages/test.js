@@ -1,11 +1,21 @@
 import React from "react"
+import tw from 'twin.macro'
 
-export default  () => (
-  <div className="tp4 shadow rounded bg-white">
-    <h1 className="text-purple leading-normal">Next.js</h1>
-    <p className="text-grey-dark">with TailwindCSS</p>
-    <button className="py-4 px-4 bg-blue-600 rounded text-white">
-      Button One
-    </button>
+import { Aperture } from '../components/Aperture'
+
+import Test  from '../images/test.svg'
+import Logo from '../images/elitizon.svg'
+
+const Square = tw.div`bg-pink-500 w-10 h-10`
+
+export default () => (
+  <div>
+    <Square />
+    <Square tw="m-5 bg-green-500"></Square>
+    <div tw="bg-yellow-200 h-20 flex flex-col items-center justify-center">
+      <Aperture tw="fill-current text-pink-500 h-24"  />
+    </div>
+    <Test tw="text-pink-500 fill-current w-10 h-10"/>
+    <Logo tw="text-pink-500 fill-current w-1/2"/>
   </div>
 )
