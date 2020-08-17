@@ -15,26 +15,26 @@ export default () => {
   return (
     <div tw="flex flex-col w-screen">
       <Header tw="flex flex-row bg-white mx-auto shadow fixed w-screen items-center justify-between">
-        <div>
-          <LinkLogo tw="inline-block sm:w-48 w-32 ml-4 my-4">
-            <ElitizonLogo />
-          </LinkLogo>
-        </div>
-        <div tw="flex flex-row items-center">
-          <navigation tw="invisible sm:visible">
-            <ul class="flex flex-row space-x-6 mr-4">
-              <li>
-                <LinkMenu href="#">About</LinkMenu>
-              </li>
-              <li>
-                <LinkMenu href="#">Blog</LinkMenu>
-              </li>
-              <li>
-                <LinkMenu href="#">Contact Us</LinkMenu>
-              </li>
-            </ul>
-          </navigation>
-          <BurgerMenu tw="fill-current text-gray-700 hocus:text-gray-600 w-10 h-10 inline-block mx-4 sm:hidden">
+        <LinkLogo tw="inline-block sm:w-48 w-32 ml-4 my-4">
+          <ElitizonLogo />
+        </LinkLogo>
+        <div tw="flex flex-row items-center justify-end">
+          <div tw="w-full">
+            <navigation tw="invisible sm:visible">
+              <ul class="flex flex-row space-x-6 mr-4">
+                <li>
+                  <LinkMenu href="#">About</LinkMenu>
+                </li>
+                <li>
+                  <LinkMenu href="#">Blog</LinkMenu>
+                </li>
+                <li>
+                  <LinkMenu href="#">Contact Us</LinkMenu>
+                </li>
+              </ul>
+            </navigation>
+          </div>
+          <BurgerMenu tw="fill-current text-pink-500 w-8 h-8 mr-4 sm:hidden">
             <Menu />
           </BurgerMenu>
         </div>
