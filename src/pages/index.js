@@ -72,6 +72,13 @@ export const query = graphql`
               sizes(maxWidth: 2000, traceSVG: { color: "#639" }) {
                 ...GatsbyImageSharpSizes_tracedSVG
               }
+              fluid(maxWidth: 600) {
+                sizes
+                src
+                srcSet
+                srcWebp
+                srcSetWebp
+              }
             }
           }
         }

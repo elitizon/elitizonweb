@@ -20,8 +20,8 @@ export default () => {
         </LinkLogo>
         <div tw="flex flex-row items-center justify-end">
           <div tw="w-full">
-            <navigation tw="invisible sm:visible">
-              <ul class="flex flex-row space-x-6 mr-4">
+            <div tw="invisible sm:visible">
+              <ul tw="flex flex-row space-x-6 mr-4">
                 <li>
                   <LinkMenu href="#">About</LinkMenu>
                 </li>
@@ -32,7 +32,7 @@ export default () => {
                   <LinkMenu href="#">Contact Us</LinkMenu>
                 </li>
               </ul>
-            </navigation>
+            </div>
           </div>
           <BurgerMenu tw="fill-current text-pink-500 w-8 h-8 mr-4 sm:hidden">
             <Menu />

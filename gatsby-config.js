@@ -21,8 +21,19 @@ module.exports = {
         }
       }
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `elitizon`,
+        short_name: `elitizon`,
+        background_color: `#2A3045`,
+        theme_color: `#FA3366`,         
+        display: `elitizon`,
+        icon: `src/images/elitizon-icon.svg`
+      }
+    },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
