@@ -9,6 +9,9 @@ module.exports = {
     },
     extend: {
       colors: {
+
+        transparent: 'transparent',
+
         electric: "#db00ff",
         ribbon: "#0047ff",
 

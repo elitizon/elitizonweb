@@ -1,7 +1,7 @@
 import React from "react"
 import tw from "twin.macro"
 
-import Footer from '../components/footers/SimpleFiveColumn'
+import Footer from '../components/footers/MiniCenteredFooter'
 
 import ElitizonLogo from "../images/elitizon.svg"
 import Menu from "../images/menu.svg"
