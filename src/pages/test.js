@@ -7,8 +7,9 @@ import Footer from "../components/footers/FiveColumnWithInputForm"
 const Main = tw.div`mt-20 max-w-screen-2xl text-gray-700 mx-auto`
 
 export default () => (
-  <AnimationRevealPage>
+  <div>
     <Hero />
+    <AnimationRevealPage>
     <Main>
       <div tw="font-sans text-lg p-8 text-justify">
         <h1 tw="text-2xl font-bold text-gray-800">First chapter</h1>
@@ -72,6 +73,7 @@ export default () => (
         </p>
       </div>
     </Main>
+    </AnimationRevealPage>
     <Footer />
-  </AnimationRevealPage>
+  </div>
 )
