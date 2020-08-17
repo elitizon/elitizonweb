@@ -9,11 +9,12 @@ const LinkLogo = tw.a``
 const BurgerMenu = tw.button``
 const LinkMenu = tw.a`text-xl text-gray-800 font-semibold hover:text-pink-500`
 const Main = tw.div`mt-20 max-w-screen-2xl text-gray-700 mx-auto `
+const Hero = tw.div``
 
 export default () => {
   return (
-    <div tw="flex flex-col">
-      <Header tw="flex flex-row bg-white mx-auto shadow fixed w-full items-center justify-between">
+    <div tw="flex flex-col w-screen">
+      <Header tw="flex flex-row bg-white mx-auto shadow fixed w-screen items-center justify-between">
         <div>
           <LinkLogo tw="inline-block sm:w-48 w-32 ml-4 my-4">
             <ElitizonLogo />
