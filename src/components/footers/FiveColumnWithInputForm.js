@@ -7,7 +7,7 @@ import FacebookIcon from "../../images/facebook-icon.svg"
 import TwitterIcon from "../../images/twitter-icon.svg"
 import YoutubeIcon from "../../images/youtube-icon.svg"
 
-const Container = tw.div`relative bg-gray-200 text-gray-700 py-20 lg:py-24`
+const Container = tw.div`relative bg-gray-200 text-gray-700 py-20 lg:py-24 sm:px-8`
 const Content = tw.div`max-w-screen-xl mx-auto relative z-10`
 const SixColumns = tw.div`flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12`
 
