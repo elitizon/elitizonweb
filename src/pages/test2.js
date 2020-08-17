@@ -8,7 +8,7 @@ const Main = tw.div`mt-20 max-w-screen-2xl text-gray-700 mx-auto`
 
 export default () => (
   <div>
-    <Hero />
+    <Hero/>
     <AnimationRevealPage>
     <Main>
       <div tw="font-sans text-lg p-8 text-justify">
