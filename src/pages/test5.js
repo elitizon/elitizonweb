@@ -4,6 +4,7 @@ import tw from "twin.macro"
 import AnimationRevealPage from "../helpers/AnimationRevealPage.js"
 import Hero from "../components/hero/TwoColumnWithFeaturesAndTestimonial"
 import Cta from "../components/cta/GetStartedLight"
+import Blog from "../components/blogs/PopularAndRecentBlogPosts"
 import Footer from "../components/footers/FiveColumnWithInputForm"
 const Main = tw.div`mt-20 max-w-screen-2xl text-gray-700 mx-auto`
 
@@ -11,6 +12,7 @@ export default () => (
   <div>
     <Hero/>
     <AnimationRevealPage>
+      <Blog/>
     <Cta/>
     <Main>
       <div tw="font-sans text-lg p-8 text-justify">
