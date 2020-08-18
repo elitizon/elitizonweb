@@ -6,7 +6,7 @@ import Hero from "../components/hero/TwoColumnWithFeaturesAndTestimonial"
 import Cta from "../components/cta/GetStartedLight"
 import Blog from "../components/blogs/PopularAndRecentBlogPosts"
 import Cards from "../components/cards/TwoTrendingPreviewCardsWithImage"
-import Faqs from "../components/faqs/SingleCol"
+import Faqs from "../components/faqs/TwoColumnPrimaryBackground"
 import Footer from "../components/footers/FiveColumnWithInputForm"
 const Main = tw.div`mt-20 max-w-screen-2xl text-gray-700 mx-auto`
 
