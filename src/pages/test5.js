@@ -3,6 +3,7 @@ import tw from "twin.macro"
 
 import AnimationRevealPage from "../helpers/AnimationRevealPage.js"
 import Hero from "../components/hero/TwoColumnWithFeaturesAndTestimonial"
+import Cta from "../components/cta/DownloadApp"
 import Footer from "../components/footers/FiveColumnWithInputForm"
 const Main = tw.div`mt-20 max-w-screen-2xl text-gray-700 mx-auto`
 
@@ -10,6 +11,7 @@ export default () => (
   <div>
     <Hero/>
     <AnimationRevealPage>
+    <Cta/>
     <Main>
       <div tw="font-sans text-lg p-8 text-justify">
         <h1 tw="text-2xl font-bold text-gray-800">First chapter</h1>
