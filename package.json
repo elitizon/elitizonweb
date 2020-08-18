@@ -51,6 +51,7 @@
     "react-modal": "^3.11.2",
     "react-seo-component": "^2.0.2",
     "react-slick": "^0.27.9",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.1.1",
     "twin.macro": "^1.7.0",
     "use-in-view": "^1.0.15"

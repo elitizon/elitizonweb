@@ -9,6 +9,8 @@ import Cards from "../components/cards/TwoTrendingPreviewCardsWithImage"
 import Features from "../components/features/VerticalWithAlternateImageAndText"
 import Faqs from "../components/faqs/TwoColumnPrimaryBackground"
 import Form from "../components/forms/TwoColContactUsWithIllustrationFullForm"
+import Princing from "../components/pricing/TwoPlansWithDurationSwitcher"
+import Testimonial from "../components/testimonials/TwoColumnWithImageAndRating"
 import Footer from "../components/footers/FiveColumnWithInputForm"
 const Main = tw.div`mt-20 max-w-screen-2xl text-gray-700 mx-auto`
 
@@ -84,6 +86,8 @@ export default () => (
       </Main>
       <Features/>
       <Faqs/>
+      <Princing/>
+      <Testimonial/>
       <Form/>
     </AnimationRevealPage>
     <Footer />
