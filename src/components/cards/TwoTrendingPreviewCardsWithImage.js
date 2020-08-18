@@ -4,10 +4,10 @@ import styled from "styled-components"
 import { SectionHeading } from "../misc/Headings.js"
 import { PrimaryLink as PrimaryLinkBase } from "../misc/Links.js"
 import { PrimaryButton as PrimaryButtonBase } from "../misc/Buttons.js"
-import LocationIcon  from "../../images/icons/map-pin.svg"
-import TimeIcon  from "../../images/icons/clock.svg"
-import TrendingIcon  from "../../images/icons/trending-up.svg"
-import ArrowRightIcon  from "../../images/arrow-right-icon.svg"
+import LocationIcon from "../../images/icons/map-pin.svg"
+import TimeIcon from "../../images/icons/clock.svg"
+import TrendingIcon from "../../images/icons/trending-up.svg"
+import ArrowRightIcon from "../../images/arrow-right-icon.svg"
 
 const Container = tw.div`relative`
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
