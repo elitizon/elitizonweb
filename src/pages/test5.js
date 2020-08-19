@@ -11,13 +11,12 @@ import Faqs from "../components/faqs/TwoColumnPrimaryBackground"
 import Form from "../components/forms/TwoColContactUsWithIllustrationFullForm"
 import Pricing from "../components/pricing/TwoPlansWithDurationSwitcher"
 import Testimonial from "../components/testimonials/TwoColumnWithImageAndProfilePictureReview"
-import Footer from "../components/footers/FiveColumnWithInputForm"
+import Footer from "../components/footers/FiveColumnDark"
 const Main = tw.div`mt-20 max-w-screen-2xl text-gray-700 mx-auto`
 
 export default () => (
-  <div>
+  <AnimationRevealPage>
     <Hero />
-    <AnimationRevealPage>
       <Cards/>
       <Blog />
       <Cta />
@@ -89,7 +88,6 @@ export default () => (
       <Pricing/>
       <Testimonial/>
       <Form/>
-    </AnimationRevealPage>
     <Footer />
-  </div>
+  </AnimationRevealPage>
 )

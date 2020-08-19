@@ -3,6 +3,7 @@ import tw from "twin.macro"
 
 import Footer from '../components/footers/FiveColumnWithInputForm'
 
+
 import ElitizonLogo from "../images/elitizon.svg"
 import Menu from "../images/menu.svg"
 
@@ -104,7 +105,9 @@ export default () => {
           </p>
         </div>
       </Main>
-      <Footer/>
+      <div tw="px-8">
+          <Footer />
+      </div>
     </div>
   )
 }

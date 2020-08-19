@@ -2,7 +2,7 @@ import React from "react"
 import AnimationRevealPage from "../helpers/AnimationRevealPage.js"
 import tw from "twin.macro"
 import Header from "../components/headers/light.js"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import Footer from "../components/footers/SimpleFiveColumn"
 import MainFeature1 from "../components/features/TwoColWithButton.js"
 import Features from "../components/features/ThreeColSimple.js"
 import TeamCardGrid from "../components/cards/ProfileThreeColGrid.js"
@@ -10,6 +10,7 @@ import TeamCardGrid from "../components/cards/ProfileThreeColGrid.js"
 const ShieldIconImage = "/images/shield-icon.svg"
 const CustomerLoveIconImage = "/images/simple-icon.svg"
 const SupportIconImage = "/images/support-icon.svg"
+
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`
 export default () => {
