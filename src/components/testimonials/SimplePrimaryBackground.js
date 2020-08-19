@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Slider from "react-slick"
 import tw from "twin.macro"
-import styled, { css } from "styled-components/macro" //eslint-disable-line
+import styled from "styled-components/macro" //eslint-disable-line
 import { Container, ContentWithPaddingXl } from "../misc/Layouts.js"
 import {
   SectionHeading,
@@ -111,13 +111,13 @@ export default ({
                   </CustomerProfile>
                 </CustomerNameAndProfileContainer>
                 <ControlsContainer>
-                  <ControlButton onClick={sliderRef?.slickPrev}>
+                  <ControlButton onClick={sliderRef && sliderRef.slickPrev}>
                     <ArrowLeftIcon className="icon" />
                   </ControlButton>
                   <ControlButton>
                     <ArrowRightIcon
                       className="icon"
-                      onClick={sliderRef?.slickNext}
+                      onClick={sliderRef && sliderRef.slickNext}
                     />
                   </ControlButton>
                 </ControlsContainer>
