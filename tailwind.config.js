@@ -766,6 +766,9 @@ module.exports = {
     transitionTimingFunction: ['responsive'],
     transitionDuration: ['responsive'],
   },
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
   corePlugins: {},
   plugins: [],
 }
