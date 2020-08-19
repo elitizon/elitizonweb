@@ -134,10 +134,10 @@ export default ({
                   <ImageAndControlContainer key={index}>
                     <Image imageSrc={testimonial.imageSrc} />
                     <ControlContainer>
-                      <ControlButton onClick={imageSliderRef?.slickPrev}>
+                      <ControlButton onClick={imageSliderRef && imageSliderRef.slickPrev}>
                         <ChevronLeftIcon />
                       </ControlButton>
-                      <ControlButton onClick={imageSliderRef?.slickNext}>
+                      <ControlButton onClick={imageSliderRef && imageSliderRef.slickNext}>
                         <ChevronRightIcon />
                       </ControlButton>
                     </ControlContainer>
