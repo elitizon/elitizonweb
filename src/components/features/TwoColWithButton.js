@@ -14,7 +14,18 @@ const TeamIllustrationSrc = "/images/team-illustration-2.svg"
 const Container = tw.div`relative`
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`
-const ImageColumn = tw(Column)`md:w-6/12 flex-shrink-0 relative`
+const ImageColumnX = tw(Column)`md:w-6/12 flex-shrink-0 relative overflow-hidden rounded`
+const ImageColumn = styled(ImageColumnX)`
+  img {
+    transition: transform .5s, filter 1.5s ease-in-out;
+  }
+
+  img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+  }
+`
+
 const TextColumn = styled(Column)((props) => [
   tw`md:w-6/12 mt-16 md:mt-0`,
   props.textOnLeft
@@ -26,6 +37,7 @@ const Image = styled.img((props) => [
   props.imageRounded && tw`rounded`,
   props.imageBorder && tw`border`,
   props.imageShadow && tw`shadow`,
+  tw`hover:scale-110 transition duration-500 transform ease-in-out`
 ])
 
 const DecoratorBlob = styled(SvgDotPattern)((props) => [

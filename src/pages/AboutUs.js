@@ -23,6 +23,8 @@ export default () => {
         buttonRounded={false}
         primaryButtonText="See Portfolio"
         imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
+        imageShadow = {false} 
+        imageCss = "hover:scale-150 transition duration-300 transform ease-in-out"
       />
       <MainFeature1
         subheading={<Subheading>Our Vision</Subheading>}

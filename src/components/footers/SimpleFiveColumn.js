@@ -42,9 +42,9 @@ export default () => {
           <CompanyDescription>
             Treact is an Internet Technology company providing design resources such as website templates and themes.
           </CompanyDescription>
-          <SocialLinksContainer>
+          <SocialLinksContainer >
             <SocialLink href="https://facebook.com">
-              <FacebookIcon />
+              <FacebookIcon tw=""/>
             </SocialLink>
             <SocialLink href="https://twitter.com">
               <TwitterIcon />

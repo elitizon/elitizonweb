@@ -675,6 +675,9 @@ module.exports = {
       '700': '700ms',
       '1000': '1000ms',
     },
+    animation: {
+      'spin-slow': 'spin 3s linear infinite',
+    }
   },
   variants: {
     accessibility: ['responsive', 'focus'],
