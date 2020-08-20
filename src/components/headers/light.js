@@ -9,8 +9,23 @@ import logo from "../../images/elitizon.svg"
 import MenuIcon  from "../../images/menu.svg"
 import  CloseIcon  from "../../images/x.svg"
 
+const FixedHeader = tw.div`
+  flex flex-row
+  fixed 
+  bg-white
+  h-20
+  z-50
+  -mx-8 px-8
+  -mt-8 pt-8
+  pb-8
+  shadow
+  w-screen
+`
+
 const Header = tw.header`
+  relative
   flex justify-between items-center
+  w-full
   max-w-screen-xl mx-auto
 `
 
@@ -104,6 +119,7 @@ export default ({
   links = links || defaultLinks
 
   return (
+    <FixedHeader>
     <Header className={className || "header-light"}>
       <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks}>
         {logoLink}
@@ -133,6 +149,7 @@ export default ({
         </NavToggle>
       </MobileNavLinksContainer>
     </Header>
+    </FixedHeader>
   )
 }
 
