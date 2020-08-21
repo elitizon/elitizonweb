@@ -1,5 +1,6 @@
 import React from "react"
 import tw from "twin.macro"
+import  Dump  from "../components/Dump"
 
 /* framer-motion and useInView here are used to animate the sections in when we reach them in the viewport
  */
@@ -15,17 +16,32 @@ function AnimationReveal({ disabled, children }) {
 
   if (!Array.isArray(children)) children = [children]
 
-  const directions = ["left", "right"]
+  const chooseNextAnimationDirection = (x) => {
+    if (x === "left") return "right"
+    return "left"
+  }
+
+  let currentAnimation = "right"
+
   const childrenWithAnimation = children.map((child, i) => {
+
+    currentAnimation = chooseNextAnimationDirection(currentAnimation)
+
+    if (child.props.noanimation) {
+      return <div>
+          <div key={i}>{child}</div>
+      </div>
+    }
+
     return (
-      <AnimatedSlideInComponent
-        key={i}
-        direction={directions[i % directions.length]}
-      >
-        {child}
+      <AnimatedSlideInComponent key={i} direction={currentAnimation}>
+        <div>
+          {child}
+        </div>
       </AnimatedSlideInComponent>
     )
   })
+
   return <>{childrenWithAnimation}</>
 }
 
@@ -39,6 +55,7 @@ function AnimatedSlideInComponent({
   const x = { target: "0%" }
 
   if (direction === "left") x.initial = "-150%"
+  else if (direction === "none") x.initial = "0%"
   else x.initial = "150%"
 
   return (
