@@ -1,17 +1,18 @@
 ---
-title: Hello World - from mdx!
-date: 2019-06-01
+title: Over-engineering in React
+date: 2020-06-01
 published: true
 cover: ./cover.jpg
+summary: React can be so simple and so powerful that it is one of the first choices when it comes to building a web app nowadays. But with great power comes great responsibility. Being so widespread and used, it's easy to find tons of results when looking for solutions that fulfill developer needs.
+category: Travel
+featured: true
 coverCredit: Photo by Raphaël MANSUY
 ---
 
-# h1 Heading
+# Over-engineering in React
+React can be so simple and so powerful that it is one of the first choices when it comes to building a web app nowadays. But with great power comes great responsibility. Being so widespread and used, it's easy to find tons of results when looking for solutions that fulfill developer needs, but the most popular solution may not always be the best for every case.
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+In this article I’m going to cover some common patterns and tools developers tend to blindly stick to without assessing whether they actually apply to their specific use case or not.
+## Using a Library for State Management
 
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-## h2 Heading
-
-### h3 Heading
+Don’t get me wrong, correct state management is a fundamental part of building a reliable, scalable, and futureproof application. It’s particularly important to take it into account early on in our projects, but you might want to think twice before just starting with a template based off of [insert popular state management library here]. There are a several reasons why I think this way:

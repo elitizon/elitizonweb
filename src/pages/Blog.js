@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { graphql } from 'gatsby'
 import AnimationRevealPage from "../helpers/AnimationRevealPage.js"
 import { Container, ContentWithPaddingXl } from "../components/misc/Layouts"
 import tw from "twin.macro"
@@ -46,9 +47,34 @@ const Description = tw.div``
 const ButtonContainer = tw.div`flex justify-center`
 const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`
 
-export default ({
-  headingText = "Blog Posts",
-  posts = [
+/*
+ <PostWrapper key={id}>
+            <Link to={fields.slug}>
+              {!!frontmatter.cover ? (
+                <Image sizes={frontmatter.cover.childImageSharp.sizes} />
+              ) : null}
+              <h1>{frontmatter.title}</h1>
+              <p>{frontmatter.date}</p>
+              <p>{excerpt}</p>
+            </Link>
+          </PostWrapper>*/
+
+const getPosts = (data) => {
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+  return data.allMdx.nodes.map(({ id, excerpt, frontmatter, fields }) => {
+    return {
+      imageSrc : "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
+      category : frontmatter.category,
+      date: new Date(frontmatter.date).toLocaleDateString(undefined,options),
+      title: frontmatter.title,
+      description: frontmatter.summary || excerpt,
+      url: "https://timerse.com",
+      featured: frontmatter.featured,
+    }
+  })
+}
+/*
+const defaultPosts = [
     {
       imageSrc:
         "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
@@ -78,12 +104,18 @@ export default ({
     getPlaceholderPost(),
     getPlaceholderPost(),
     getPlaceholderPost(),
-  ],
+  ]*/
+
+
+export default ({
+  headingText = "Blog Posts",
+  data
 }) => {
   const [visible, setVisible] = useState(7)
   const onLoadMoreClick = () => {
     setVisible((v) => v + 6)
   }
+  const posts = getPosts(data)
   return (
     <AnimationRevealPage>
       <Header noanimation/>
@@ -133,3 +165,44 @@ const getPlaceholderPost = () => ({
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   url: "https://reddit.com",
 })
+
+
+
+export const query = graphql`
+  query SITE_BLOG_QUERY {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true } } }
+    ) {
+      nodes {
+        id
+        excerpt(pruneLength: 250)
+        frontmatter {
+          title
+          category
+          featured
+          summary
+          date
+          cover {
+            publicURL
+            childImageSharp {
+              sizes(maxWidth: 2000, traceSVG: { color: "#639" }) {
+                ...GatsbyImageSharpSizes_tracedSVG
+              }
+              fluid(maxWidth: 600) {
+                sizes
+                src
+                srcSet
+                srcWebp
+                srcSetWebp
+              }
+            }
+          }
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+`
