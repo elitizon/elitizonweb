@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { graphql } from 'gatsby'
+import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 import AnimationRevealPage from "../helpers/AnimationRevealPage.js"
 import { Container, ContentWithPaddingXl } from "../components/misc/Layouts"
 import tw from "twin.macro"
@@ -22,7 +23,7 @@ const PostContainer = styled.div`
       ${Post} {
         ${tw`sm:flex-row! h-full sm:pr-4`}
       }
-      ${Image} {
+      ${ImageContainer} {
         ${tw`sm:h-96 sm:min-h-full sm:w-1/2 lg:w-2/3 sm:rounded-t-none sm:rounded-l-lg`}
       }
       ${Info} {
@@ -34,9 +35,8 @@ const PostContainer = styled.div`
     `}
 `
 const Post = tw.div`cursor-pointer flex flex-col bg-gray-100 rounded-lg`
-const Image = styled.div`
-  ${(props) => css`background-image: url("${props.imageSrc}");`}
-  ${tw`h-64 w-full bg-cover bg-center rounded-t-lg`}
+const ImageContainer = styled.div`
+  ${tw`h-64 w-full rounded-t-lg`}
 `
 const Info = tw.div`p-8 border-2 border-t-0 rounded-lg rounded-t-none`
 const Category = tw.div`uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose after:content after:block after:border-b-2 after:border-primary-500 after:w-8`
@@ -47,70 +47,29 @@ const Description = tw.div``
 const ButtonContainer = tw.div`flex justify-center`
 const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`
 
-/*
- <PostWrapper key={id}>
-            <Link to={fields.slug}>
-              {!!frontmatter.cover ? (
-                <Image sizes={frontmatter.cover.childImageSharp.sizes} />
-              ) : null}
-              <h1>{frontmatter.title}</h1>
-              <p>{frontmatter.date}</p>
-              <p>{excerpt}</p>
-            </Link>
-          </PostWrapper>*/
-
 const getPosts = (data) => {
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }
   return data.allMdx.nodes.map(({ id, excerpt, frontmatter, fields }) => {
     return {
-      imageSrc : "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
-      category : frontmatter.category,
-      date: new Date(frontmatter.date).toLocaleDateString(undefined,options),
+      id,
+      imageSrc: frontmatter.cover ? frontmatter.cover.publicURL : "",
+      category: frontmatter.category,
+      date: new Date(frontmatter.date).toLocaleDateString(undefined, options),
       title: frontmatter.title,
       description: frontmatter.summary || excerpt,
-      url: "https://timerse.com",
-      featured: frontmatter.featured,
+      imageSizes: frontmatter.cover?.childImageSharp.sizes,
+      url: fields.slug,
+      featured: frontmatter.featured || false,
     }
   })
 }
-/*
-const defaultPosts = [
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
-      category: "Travel Tips",
-      date: "April 21, 2020",
-      title: "Safely Travel in Foreign Countries",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      url: "https://timerse.com",
-      featured: true,
-    },
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-  ]*/
 
-
-export default ({
-  headingText = "Blog Posts",
-  data
-}) => {
+export default ({ headingText = "Blog Posts", data }) => {
   const [visible, setVisible] = useState(7)
   const onLoadMoreClick = () => {
     setVisible((v) => v + 6)
@@ -118,7 +77,7 @@ export default ({
   const posts = getPosts(data)
   return (
     <AnimationRevealPage>
-      <Header noanimation/>
+      <Header noanimation />
       <Container>
         <ContentWithPaddingXl>
           <HeadingRow>
@@ -127,17 +86,23 @@ export default ({
           <Posts>
             {posts.slice(0, visible).map((post, index) => (
               <PostContainer key={index} featured={post.featured}>
-                <Post className="group" as="a" href={post.url}>
-                  <Image imageSrc={post.imageSrc} />
-                  <Info>
-                    <Category>{post.category}</Category>
-                    <CreationDate>{post.date}</CreationDate>
-                    <Title>{post.title}</Title>
-                    {post.featured && post.description && (
-                      <Description>{post.description}</Description>
-                    )}
-                  </Info>
-                </Post>
+                <Link to={post.url}>
+                  <Post className="group">
+                    {!!post.imageSizes ? (
+                      <ImageContainer tw="overflow-hidden">
+                        <Img tw="h-full w-full" sizes={post.imageSizes} />
+                      </ImageContainer>
+                    ) : null}
+                    <Info>
+                      <Category>{post.category}</Category>
+                      <CreationDate>{post.date}</CreationDate>
+                      <Title>{post.title}</Title>
+                      {post.featured && post.description && (
+                        <Description>{post.description}</Description>
+                      )}
+                    </Info>
+                  </Post>
+                  </Link>
               </PostContainer>
             ))}
           </Posts>
@@ -150,7 +115,7 @@ export default ({
           )}
         </ContentWithPaddingXl>
       </Container>
-      <Footer noanimation/>
+      <Footer noanimation />
     </AnimationRevealPage>
   )
 }
@@ -165,8 +130,6 @@ const getPlaceholderPost = () => ({
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   url: "https://reddit.com",
 })
-
-
 
 export const query = graphql`
   query SITE_BLOG_QUERY {
