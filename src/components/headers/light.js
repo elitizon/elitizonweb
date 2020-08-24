@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js"
 
-import logo from "../../images/elitizon.svg"
+import Logo from "../../images/elitizon.svg"
 import MenuIcon  from "../../images/menu.svg"
 import  CloseIcon  from "../../images/x.svg"
 
@@ -93,7 +93,6 @@ export default ({
     <NavLinks key={1}>
       <NavLink href="/AboutUs">About</NavLink>
       <NavLink href="/Blog">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
       <NavLink href="/#">Contact Us</NavLink>
       <NavLink href="/#" tw="lg:ml-12!">
         Login
@@ -104,13 +103,14 @@ export default ({
     </NavLinks>,
   ]
 
+
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler()
   const collapseBreakpointCss =
     collapseBreakPointCssMap[collapseBreakpointClass]
 
   const defaultLogoLink = (
     <LogoLink href="/">
-      elitizon
+      <Logo tw="sm:h-12 h-8"></Logo>
     </LogoLink>
   )
 
