@@ -28,7 +28,6 @@ const Header = tw.header`
   w-full
   max-w-screen-xl mx-auto
 `
-
 export const NavLinks = tw.div`inline-block`
 
 /* hocus: stands for "on hover or focus"
@@ -92,8 +91,8 @@ export default ({
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
+      <NavLink href="/AboutUs">About</NavLink>
+      <NavLink href="/Blog">Blog</NavLink>
       <NavLink href="/#">Pricing</NavLink>
       <NavLink href="/#">Contact Us</NavLink>
       <NavLink href="/#" tw="lg:ml-12!">

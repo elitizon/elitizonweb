@@ -78,7 +78,7 @@ export default ({ headingText = "Blog Posts", data }) => {
   return (
     <AnimationRevealPage>
       <Header noanimation />
-      <Container>
+      <Container noa>
         <ContentWithPaddingXl>
           <HeadingRow>
             <Heading>{headingText}</Heading>
@@ -149,7 +149,7 @@ export const query = graphql`
           cover {
             publicURL
             childImageSharp {
-              sizes(maxWidth: 2000, traceSVG: { color: "#639" }) {
+              sizes(maxWidth: 1440, traceSVG: { color: "#639" }) {
                 ...GatsbyImageSharpSizes_tracedSVG
               }
               fluid(maxWidth: 600) {
