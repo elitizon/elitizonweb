@@ -13,7 +13,7 @@ import {
 export const Pre = styled.pre`
   text-align: left;
   margin: 1rem 0;
-  padding: 0.5rem;
+  padding: 1.5rem;
   overflow-x: auto;
   border-radius: 3px;
 

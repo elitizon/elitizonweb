@@ -131,7 +131,7 @@ const getPlaceholderPost = () => ({
 export const query = graphql`
   query SITE_BLOG_QUERY {
     allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___featured,frontmatter___date], order: DESC }
       filter: { frontmatter: { published: { eq: true } } }
     ) {
       nodes {
