@@ -1,4 +1,8 @@
 import React from "react"
+import { SiteSEO } from "./misc/SiteSEO"
+import Footer from "./footers/FiveColumnWithInputForm"
+import Header from "./headers/light"
+
 import tw from "twin.macro"
 
 /* framer-motion and useInView here are used to animate the sections in when we reach them in the viewport
@@ -23,20 +27,19 @@ function AnimationReveal({ disabled, children }) {
   let currentAnimation = "right"
 
   const childrenWithAnimation = children.map((child, i) => {
-
     currentAnimation = chooseNextAnimationDirection(currentAnimation)
 
     if (child.props?.noanimation) {
-      return <div>
+      return (
+        <div>
           <div key={i}>{child}</div>
-      </div>
+        </div>
+      )
     }
 
     return (
       <AnimatedSlideInComponent key={i} direction={currentAnimation}>
-        <div>
-          {child}
-        </div>
+        <div>{child}</div>
       </AnimatedSlideInComponent>
     )
   })
@@ -74,8 +77,16 @@ function AnimatedSlideInComponent({
   )
 }
 
-export default (props) => (
-  <StyledDiv className="App">
-    <AnimationReveal {...props} />
-  </StyledDiv>
-)
+
+export const Page = (props) => {
+  return (
+    <>
+      <SiteSEO />
+      <StyledDiv className="App">
+        <Header noanimation/>
+        <AnimationReveal {...props} />
+        <Footer noanimation />
+      </StyledDiv>
+    </>
+  )
+}

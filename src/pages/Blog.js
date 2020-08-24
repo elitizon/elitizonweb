@@ -1,15 +1,14 @@
 import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import AnimationRevealPage from "../helpers/AnimationRevealPage.js"
 import { Container, ContentWithPaddingXl } from "../components/misc/Layouts"
 import tw from "twin.macro"
 import styled from "styled-components"
 import { css } from "styled-components/macro"
-import Header from "../components/headers/light.js"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
 import { SectionHeading } from "../components/misc/Headings"
 import { PrimaryButton } from "../components/misc/Buttons"
+import { Page } from "../components/Page"
+
 import { formatDate } from "../utils/formatDate"
 
 const HeadingRow = tw.div`flex`
@@ -73,8 +72,7 @@ export default ({ headingText = "Blog Posts", data }) => {
   }
   const posts = getPosts(data)
   return (
-    <AnimationRevealPage>
-      <Header noanimation />
+    <Page>
       <Container noanimation>
         <ContentWithPaddingXl>
           <HeadingRow>
@@ -112,8 +110,7 @@ export default ({ headingText = "Blog Posts", data }) => {
           )}
         </ContentWithPaddingXl>
       </Container>
-      <Footer noanimation />
-    </AnimationRevealPage>
+    </Page>
   )
 }
 

@@ -13,7 +13,6 @@ import { formatDate } from "../utils/formatDate"
 import ArrowRightIcon from "../images/arrow-right-2-icon.svg"
 import ArrowLeftIcon from "../images/arrow-left-2-icon.svg"
 
-
 const HeadingRow = tw.div`flex`
 const Heading = tw(SectionHeading)`text-gray-800`
 const Category = tw.div`uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose after:content after:block after:border-b-2 after:border-primary-500 after:w-8`
@@ -43,9 +42,8 @@ export default ({ data, pageContext }) => {
   const publishedDate = new Date(date).toISOString()
 
   return (
-    <AnimationRevealPage>
+    <>
       <SEO
-        noanimation
         title={title}
         description={excerpt}
         image={
@@ -60,43 +58,45 @@ export default ({ data, pageContext }) => {
         publishedDate={publishedDate}
         modifiedDate={new Date(Date.now()).toISOString()}
       />
-      <Header noanimation />
-      <Container noanimation>
-        <ContentWithPaddingXl>
-          <HeadingRow>
-            <Heading>{title}</Heading>
-          </HeadingRow>
-          <Category>{category}</Category>
-          <CreationDate>{formatedDate}</CreationDate>
-          <PostContent className="markdown">
-            <MDXRenderer>{body}</MDXRenderer>
-          </PostContent>
-          <PostsNavigation>
-            {previous === false ? null : (
-              <>
-                {previous && (
-                  <LinkPage to={previous.fields.slug}>
-                    <ArrowLeftIcon tw="w-4" />
-                    <span>{previous.frontmatter.title}</span>
-                  </LinkPage>
-                )}
-              </>
-            )}
-            {next === false ? null : (
-              <>
-                {next && (
-                  <LinkPage to={next.fields.slug}>
-                    <ArrowRightIcon tw="w-4" />
-                    <span>{next.frontmatter.title}</span>
-                  </LinkPage>
-                )}
-              </>
-            )}
-          </PostsNavigation>
-        </ContentWithPaddingXl>
-      </Container>
-      <Footer noanimation />
-    </AnimationRevealPage>
+      <AnimationRevealPage>
+        <Header noanimation />
+        <Container noanimation>
+          <ContentWithPaddingXl>
+            <HeadingRow>
+              <Heading>{title}</Heading>
+            </HeadingRow>
+            <Category>{category}</Category>
+            <CreationDate>{formatedDate}</CreationDate>
+            <PostContent className="markdown">
+              <MDXRenderer>{body}</MDXRenderer>
+            </PostContent>
+            <PostsNavigation>
+              {previous === false ? null : (
+                <>
+                  {previous && (
+                    <LinkPage to={previous.fields.slug}>
+                      <ArrowLeftIcon tw="w-4" />
+                      <span>{previous.frontmatter.title}</span>
+                    </LinkPage>
+                  )}
+                </>
+              )}
+              {next === false ? null : (
+                <>
+                  {next && (
+                    <LinkPage to={next.fields.slug}>
+                      <ArrowRightIcon tw="w-4" />
+                      <span>{next.frontmatter.title}</span>
+                    </LinkPage>
+                  )}
+                </>
+              )}
+            </PostsNavigation>
+          </ContentWithPaddingXl>
+        </Container>
+        <Footer noanimation />
+      </AnimationRevealPage>
+    </>
   )
 }
 
