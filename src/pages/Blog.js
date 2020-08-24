@@ -10,6 +10,7 @@ import Header from "../components/headers/light.js"
 import Footer from "../components/footers/FiveColumnWithInputForm.js"
 import { SectionHeading } from "../components/misc/Headings"
 import { PrimaryButton } from "../components/misc/Buttons"
+import { formatDate } from "../utils/formatDate"
 
 const HeadingRow = tw.div`flex`
 const Heading = tw(SectionHeading)`text-gray-900`
@@ -48,23 +49,19 @@ const ButtonContainer = tw.div`flex justify-center`
 const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`
 
 const getPosts = (data) => {
-  const options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }
   return data.allMdx.nodes.map(({ id, excerpt, frontmatter, fields }) => {
+    const { title, category, date, summary, cover, featured } = frontmatter
+
     return {
       id,
-      imageSrc: frontmatter.cover ? frontmatter.cover.publicURL : "",
-      category: frontmatter.category,
-      date: new Date(frontmatter.date).toLocaleDateString(undefined, options),
-      title: frontmatter.title,
-      description: frontmatter.summary || excerpt,
-      imageSizes: frontmatter.cover?.childImageSharp.sizes,
+      imageSrc: cover ? cover.publicURL : "",
+      category: category,
+      date: formatDate(date),
+      title: title,
+      description: summary || excerpt,
+      imageSizes: cover?.childImageSharp.sizes,
       url: fields.slug,
-      featured: frontmatter.featured || false,
+      featured: featured || false,
     }
   })
 }
@@ -102,7 +99,7 @@ export default ({ headingText = "Blog Posts", data }) => {
                       )}
                     </Info>
                   </Post>
-                  </Link>
+                </Link>
               </PostContainer>
             ))}
           </Posts>

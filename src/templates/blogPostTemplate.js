@@ -2,8 +2,6 @@ import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 import tw from "twin.macro"
-import styled from "styled-components"
-import { css } from "styled-components/macro"
 import SEO from "react-seo-component"
 import { Container, ContentWithPaddingXl } from "../components/misc/Layouts"
 import AnimationRevealPage from "../helpers/AnimationRevealPage.js"
@@ -11,11 +9,13 @@ import Header from "../components/headers/light.js"
 import Footer from "../components/footers/FiveColumnWithInputForm.js"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import { SectionHeading } from "../components/misc/Headings"
+import { formatDate } from "../utils/formatDate"
 import ArrowRightIcon from "../images/arrow-right-2-icon.svg"
 import ArrowLeftIcon from "../images/arrow-left-2-icon.svg"
 
+
 const HeadingRow = tw.div`flex`
-const Heading = tw(SectionHeading)`text-gray-900`
+const Heading = tw(SectionHeading)`text-gray-800`
 const Category = tw.div`uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose after:content after:block after:border-b-2 after:border-primary-500 after:w-8`
 const CreationDate = tw.div`mt-4 uppercase text-gray-600 italic font-semibold text-xs`
 
@@ -38,6 +38,10 @@ export default ({ data, pageContext }) => {
   const { frontmatter, body, fields, excerpt } = data.mdx
   const { title, date, cover, category } = frontmatter
   const { previous, next } = pageContext
+
+  const formatedDate = formatDate(date)
+  const publishedDate = new Date(date).toISOString()
+
   return (
     <AnimationRevealPage>
       <SEO
@@ -53,7 +57,7 @@ export default ({ data, pageContext }) => {
         twitterUsername={twitterUsername}
         author={authorName}
         article={true}
-        publishedDate={date}
+        publishedDate={publishedDate}
         modifiedDate={new Date(Date.now()).toISOString()}
       />
       <Header noanimation />
@@ -63,7 +67,7 @@ export default ({ data, pageContext }) => {
             <Heading>{title}</Heading>
           </HeadingRow>
           <Category>{category}</Category>
-          <CreationDate>{date}</CreationDate>
+          <CreationDate>{formatedDate}</CreationDate>
           <PostContent className="markdown">
             <MDXRenderer>{body}</MDXRenderer>
           </PostContent>
@@ -102,7 +106,7 @@ export const query = graphql`
       frontmatter {
         title
         category
-        date(formatString: "YYYY MMMM Do")
+        date
         cover {
           publicURL
         }
