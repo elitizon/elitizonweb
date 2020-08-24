@@ -78,7 +78,7 @@ export default ({ headingText = "Blog Posts", data }) => {
   return (
     <AnimationRevealPage>
       <Header noanimation />
-      <Container noa>
+      <Container noanimation>
         <ContentWithPaddingXl>
           <HeadingRow>
             <Heading>{headingText}</Heading>
