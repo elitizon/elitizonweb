@@ -57,7 +57,7 @@ export default () => {
             <ColumnHeading>Main</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">Blog</Link>
+                <Link href="/Blog">Blog</Link>
               </LinkListItem>
               <LinkListItem>
                 <Link href="#">FAQs</Link>
@@ -66,7 +66,7 @@ export default () => {
                 <Link href="#">Support</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">About Us</Link>
+                <Link href="/AboutUs">About Us</Link>
               </LinkListItem>
             </LinkList>
           </Column>

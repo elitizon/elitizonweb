@@ -49,9 +49,13 @@ export default ({
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   submitButtonText = "Send",
-  formAction = "#",
-  formMethod = "get",
+  formAction = "",
+  formMethod = "POST",
   textOnLeft = true,
+  fullNamePlaceholder = "Full Name",
+  emailPlaceholder = "Your Email Address",
+  messagePlaceholder = "Your Message Here",
+  subjectPlaceholder = "Subject"
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
@@ -66,15 +70,21 @@ export default ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
-            <Form action={formAction} method={formMethod}>
+            <Form action={formAction} method={formMethod}
+              name="contact"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="contact"/>
               <Input
                 type="email"
                 name="email"
-                placeholder="Your Email Address"
+                placeholder={emailPlaceholder}
+                required
               />
-              <Input type="text" name="name" placeholder="Full Name" />
-              <Input type="text" name="subject" placeholder="Subject" />
-              <Textarea name="message" placeholder="Your Message Here" />
+              <Input type="text" name="name" placeholder={fullNamePlaceholder} required/>
+              <Input type="text" name="subject" placeholder={subjectPlaceholder} />
+              <Textarea name="message" placeholder={messagePlaceholder} required />
               <SubmitButton type="submit">{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>

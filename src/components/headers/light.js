@@ -93,8 +93,8 @@ export default ({
     <NavLinks key={1}>
       <NavLink href="/AboutUs">About</NavLink>
       <NavLink href="/Blog">Blog</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
+      <NavLink href="/ContactUs">Contact Us</NavLink>
+      <NavLink href="/ContactUs" tw="lg:ml-12!">
         Login
       </NavLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
