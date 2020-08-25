@@ -1,5 +1,6 @@
 import React from "react"
 import tw from "twin.macro"
+import styled from "styled-components"
 import { Page } from "../components/Page"
 import ContactForm from "../components/forms/TwoColContactUsWithIllustrationFullForm"
 
@@ -35,6 +36,8 @@ export default () => {
         emailPlaceholder={emailPlaceholder}
         subjectPlaceholder={subjectPlaceholder}
         messagePlaceholder={messagePlaceholder}
+        formAction="/ThankYou"
+        formMethod="POST"
       />
     </Page>
   )
