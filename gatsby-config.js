@@ -58,7 +58,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-filesystem`,
-      options: { path: `${__dirname}/posts`, name: `posts` },
+      options: { path: `${__dirname}/data`, name: `data` },
     },
     {
       resolve: `gatsby-plugin-postcss`,
