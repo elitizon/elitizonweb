@@ -1,12 +1,16 @@
 const siteMetadata = {
-  title: `Elitizon Limited Corporate WebSite`,
-  description: `Elitizon Corporate WebSite.`,
+  title: `elitizon ltd | Technology Venture Studio`,
+  description: `elitizon is a technology venture studio. We launch 🚀 innovative products.`,
   image: `/default-site-image.jpg`,
-  siteUrl: `https://elitizon.com`,
+  siteUrl: `https://www.elitizon.com`,
   siteLanguage: `en-GB`,
   siteLocale: `en_gb`,
-  twitterUsername: `@elitizon_ltd`,
+  twitterUsername: `@ElitizonLtd`,
   authorName: `Elitizon`,
+  linkedinPage: `https://www.linkedin.com/company/elitizon`,
+  facebookPage: `https://business.facebook.com/elitizonltd/`,
+  twitterPage: `https://twitter.com/ElitizonLtd`,
+  youtubePage: ``
 }
 
 module.exports = {

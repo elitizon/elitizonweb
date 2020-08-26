@@ -2,10 +2,12 @@ import React from "react"
 import tw from "twin.macro"
 import styled from "styled-components"
 import { PrimaryButton as PrimaryButtonBase } from "../misc/Buttons.js"
+import { useSiteMetadata } from "../../hooks/useSiteMetadata"
 
 import FacebookIcon from "../../images/facebook-icon.svg"
 import TwitterIcon from "../../images/twitter-icon.svg"
 import YoutubeIcon from "../../images/youtube-icon.svg"
+import LinkedinIcon from "../../images/linkedin-icon.svg"
 
 const Container = tw.div`relative bg-gray-200 text-gray-700 -mb-8 -mx-8 px-8 py-20 lg:py-24`
 //const Container = tw.div`relative bg-gray-200 text-gray-700 py-20 lg:py-24 sm:px-8`
@@ -49,6 +51,13 @@ const SocialLink = styled.a`
 `
 
 export default () => {
+  const {
+    linkedinPage,
+    twitterPage,
+    youtubePage,
+    facebookPage,
+  } = useSiteMetadata()
+
   return (
     <Container>
       <Content>
@@ -144,15 +153,26 @@ export default () => {
             &copy; 2020 elitizon ltd. All Rights Reserved.
           </CopywrightNotice>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
-              <FacebookIcon />
-            </SocialLink>
-            <SocialLink href="https://twitter.com">
-              <TwitterIcon />
-            </SocialLink>
-            <SocialLink href="https://youtube.com">
-              <YoutubeIcon />
-            </SocialLink>
+            {facebookPage && (
+              <SocialLink href={facebookPage}>
+                <FacebookIcon />
+              </SocialLink>
+            )}
+            {twitterPage && (
+              <SocialLink href={twitterPage}>
+                <TwitterIcon />
+              </SocialLink>
+            )}
+            {youtubePage && (
+              <SocialLink href={youtubePage}>
+                <YoutubeIcon />
+              </SocialLink>
+            )}
+            {linkedinPage && (
+              <SocialLink href={linkedinPage}>
+                <LinkedinIcon />
+              </SocialLink>
+            )}
           </SocialLinksContainer>
         </ThreeColRow>
       </Content>
