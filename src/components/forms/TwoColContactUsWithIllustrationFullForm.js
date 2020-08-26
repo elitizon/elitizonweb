@@ -6,7 +6,7 @@ import {
   Subheading as SubheadingBase,
 } from "../misc/Headings.js"
 import { PrimaryButton as PrimaryButtonBase } from "../misc/Buttons.js"
-const EmailIllustrationSrc = "/images/email-illustration.svg"
+import EmailIllustration from "../../images/undraw_envelope_n8lc.svg"
 
 const Container = tw.div`relative`
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`
@@ -18,6 +18,11 @@ const TextColumn = styled(Column)((props) => [
     ? tw`md:mr-12 lg:mr-16 md:order-first`
     : tw`md:ml-12 lg:ml-16 md:order-last`,
 ])
+const ImageContainer = styled(tw.div`rounded w-full h-full`)`
+  svg {
+    ${tw`w-full h-full`} 
+  }
+`
 
 const Image = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
@@ -55,7 +60,8 @@ export default ({
   fullNamePlaceholder = "Full Name",
   emailPlaceholder = "Your Email Address",
   messagePlaceholder = "Your Message Here",
-  subjectPlaceholder = "Subject"
+  subjectPlaceholder = "Subject",
+  image = (<EmailIllustration/>)
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
@@ -63,7 +69,7 @@ export default ({
     <Container>
       <TwoColumn>
         <ImageColumn>
-          <Image imageSrc={EmailIllustrationSrc} />
+          <ImageContainer>{image }</ImageContainer>
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>

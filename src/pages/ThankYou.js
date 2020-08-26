@@ -3,12 +3,13 @@ import tw from "twin.macro"
 import styled from "styled-components"
 import { Page } from "../components/Page"
 
-const IllustrationSvg = "/images/email-illustration.svg"
+import ThankYouImage from "../images/undraw_true_love_cy8x.svg"
 
-const Image = styled.div((props) => [
-  `background-image: url("${props.imageSrc}");`,
-  tw`rounded bg-contain bg-no-repeat bg-center h-full`,
-])
+const ImageContainer = styled(tw.div`rounded w-full h-full`)`
+  svg {
+    ${tw`w-full h-full`} 
+  }
+`
 
 
 export default () => {
@@ -21,7 +22,7 @@ export default () => {
           </div>
       </div>
       <div tw="h-80 mt-8 mb-20">
-          <Image imageSrc={IllustrationSvg} />
+        <ImageContainer><ThankYouImage/></ImageContainer>
       </div>
     </Page>
   )
