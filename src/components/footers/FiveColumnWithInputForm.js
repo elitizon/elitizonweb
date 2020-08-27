@@ -117,10 +117,10 @@ export default () => {
             <ColumnHeading>Legal</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">GDPR</Link>
+                <Link href="/legal/privacy">GDPR</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Privacy Policy</Link>
+                <Link href="/legal/privacy">Privacy Policy</Link>
               </LinkListItem>
               <LinkListItem>
                 <Link href="#">Terms of Service</Link>

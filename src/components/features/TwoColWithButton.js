@@ -12,7 +12,7 @@ import SvgDotPattern from "../../images/dot-pattern.svg"
 const TeamIllustrationSrc = "/images/team-illustration-2.svg"
 
 const Container = tw.div`relative`
-const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`
+const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto pt-20 md:pt-24  items-center`
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`
 const ImageColumnX = tw(Column)`md:w-6/12 flex-shrink-0 relative overflow-hidden rounded`
 const ImageColumn = styled(ImageColumnX)`
@@ -97,13 +97,14 @@ export default ({
             <Subheading>{subheading}</Subheading>
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <PrimaryButton
+            {primaryButtonText && <PrimaryButton
               buttonRounded={buttonRounded}
               as="a"
               href={primaryButtonUrl}
             >
               {primaryButtonText}
             </PrimaryButton>
+            }
           </TextContent>
         </TextColumn>
       </TwoColumn>
