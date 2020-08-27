@@ -28,15 +28,15 @@ export default () => {
       />
       <MainFeature1 
         subheading={<Subheading>From Zero to One</Subheading>}
-        heading="We explore new markets."
-        description = {<>We're fully committed to finding new ideas and opportunities that together with a great product, technology and team can disrupt potential markets.</>}
+        heading={<>Where Elite Companies Are Forged 🔥</>}
+        description = {<>We leverage deep experience and expertise to build and launch successful product companies.</>}
         buttonRounded={false}
         primaryButtonText= {false && <>Our process</>}
         imageSrc="https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
         textOnLeft={false}
         primaryButtonUrl = "/#"
       />
-        <Features
+       {false && <Features
         subheading={<Subheading>Our Values</Subheading>}
         heading="We follow these."
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -61,7 +61,8 @@ export default () => {
           },
         ]}
         linkText=""
-      />
+      />}
+      <div tw="mt-20"></div>
     </Page>
   )
 }

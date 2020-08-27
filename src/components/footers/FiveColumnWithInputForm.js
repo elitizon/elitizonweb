@@ -69,49 +69,51 @@ export default () => {
                 <Link href="/Blog">Blog</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">FAQs</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Support</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="/AboutUs">About Us</Link>
+                <Link href="/#">About Us</Link>
               </LinkListItem>
             </LinkList>
           </Column>
           <Column>
-            <ColumnHeading>Product</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">Log In</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Personal</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Business</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Team</Link>
-              </LinkListItem>
-            </LinkList>
+            {false && (
+              <>
+                <ColumnHeading>Product</ColumnHeading>
+                <LinkList>
+                  <LinkListItem>
+                    <Link href="#">Log In</Link>
+                  </LinkListItem>
+                  <LinkListItem>
+                    <Link href="#">Personal</Link>
+                  </LinkListItem>
+                  <LinkListItem>
+                    <Link href="#">Business</Link>
+                  </LinkListItem>
+                  <LinkListItem>
+                    <Link href="#">Team</Link>
+                  </LinkListItem>
+                </LinkList>
+              </>
+            )}
           </Column>
           <Column>
-            <ColumnHeading>Press</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">Logos</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Events</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Stories</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Office</Link>
-              </LinkListItem>
-            </LinkList>
+            {false && (
+              <>
+                <ColumnHeading>Press</ColumnHeading>
+                <LinkList>
+                  <LinkListItem>
+                    <Link href="#">Logos</Link>
+                  </LinkListItem>
+                  <LinkListItem>
+                    <Link href="#">Events</Link>
+                  </LinkListItem>
+                  <LinkListItem>
+                    <Link href="#">Stories</Link>
+                  </LinkListItem>
+                  <LinkListItem>
+                    <Link href="#">Office</Link>
+                  </LinkListItem>
+                </LinkList>
+              </>
+            )}
           </Column>
           <Column>
             <ColumnHeading>Legal</ColumnHeading>
