@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { SiteSEO } from "./misc/SiteSEO"
 import Footer from "./footers/FiveColumnWithInputForm"
 import Header from "./headers/light"
@@ -77,13 +78,15 @@ function AnimatedSlideInComponent({
   )
 }
 
-
 export const Page = (props) => {
   return (
     <>
       <SiteSEO />
+      <Helmet>
+        <meta name="google-site-verification" content="N4LdLhQ5cz8mZT6WpTlr1nbdwcJ5QAri_1-8ftKtkyg" />
+      </Helmet>
       <StyledDiv className="App">
-        <Header noanimation/>
+        <Header noanimation />
         <AnimationReveal {...props} />
         <Footer noanimation />
       </StyledDiv>
