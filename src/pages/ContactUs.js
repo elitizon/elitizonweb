@@ -36,7 +36,7 @@ export default () => {
         emailPlaceholder={emailPlaceholder}
         subjectPlaceholder={subjectPlaceholder}
         messagePlaceholder={messagePlaceholder}
-        formAction="/ThankYou"
+        formAction="/thankyou"
         formMethod="POST"
       />
     </Page>
