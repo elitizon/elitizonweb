@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: `elitizon ltd | Technology Venture Studio`,
+  title: `elitizon | Technology Venture Studio`,
   description: `elitizon is a technology venture studio. We launch 🚀 innovative products.`,
   image: `/default-site-image.jpg`,
   siteUrl: `https://www.elitizon.com`,
@@ -85,7 +85,7 @@ module.exports = {
         // Exclude specific pages or groups of pages using glob parameters
         // See: https://github.com/isaacs/minimatch
         // The example below will exclude the single `path/to/page` and all routes beginning with `category`
-        exclude: [`/test*`, `/path/to/page`],
+        exclude: [`/test*`, `/path/to/page`,`/404/*`],
         query: `
           {
             site {
