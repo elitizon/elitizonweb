@@ -9,27 +9,29 @@ import CustomizeIconImage from "../images/customize-icon.svg"
 
 import { Page } from "../components/Page"
 
+const StrongText = tw.span`text-gray-800`
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`
 export default () => {
   return (
     <Page>
-      <MainFeature1
-        subheading={<Subheading>About elitizon</Subheading>}
+      <MainFeature1 noanimation
+        subheading={<Subheading>Technology Venture Studio</Subheading>}
         heading="We launch 🚀 innovative products."
-        description="We're fully committed to finding new ideas and opportunities that together with a great product, technology and team can disrupt potential markets."
+        description={(<>As a technology venture studio we develop <StrongText>ideas</StrongText> into <StrongText>products</StrongText> and products into <StrongText>companies</StrongText>.</>)}
         buttonRounded={false}
-        primaryButtonText="See Portfolio"
+        primaryButtonText="Discover our mission"
         imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
         imageShadow={false}
         imageCss="hover:scale-150 transition duration-300 transform ease-in-out"
-        primaryButtonUrl = "/#"
+        primaryButtonUrl = "/ContactUs"
       />
-      <MainFeature1
-        subheading={<Subheading>Our Vision</Subheading>}
+      <MainFeature1 
+        subheading={<Subheading>From Zero to One</Subheading>}
         heading="We explore new markets."
+        description = {<>We're fully committed to finding new ideas and opportunities that together with a great product, technology and team can disrupt potential markets.</>}
         buttonRounded={false}
-        primaryButtonText="Contact Us"
+        primaryButtonText= {false && <>Our process</>}
         imageSrc="https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
         textOnLeft={false}
         primaryButtonUrl = "/#"
