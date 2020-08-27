@@ -2,12 +2,13 @@ import React from "react"
 import tw from "twin.macro"
 import MainFeature1 from "../components/features/TwoColWithButton.js"
 import Features from "../components/features/ThreeColSimple.js"
-import TeamCardGrid from "../components/cards/ProfileThreeColGrid.js"
+
+import SupportIconImage from "../images/support-icon.svg"
+import ShieldIconImage from "../images/shield-icon.svg"
+import CustomizeIconImage from "../images/customize-icon.svg"
+
 import { Page } from "../components/Page"
 
-const ShieldIconImage = "/images/shield-icon.svg"
-const CustomerLoveIconImage = "/images/simple-icon.svg"
-const SupportIconImage = "/images/support-icon.svg"
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`
 export default () => {
@@ -33,25 +34,25 @@ export default () => {
         textOnLeft={false}
         primaryButtonUrl = "/#"
       />
-      <Features
+        <Features
         subheading={<Subheading>Our Values</Subheading>}
         heading="We follow these."
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         cards={[
           {
-            imageSrc: SupportIconImage,
+            image: <SupportIconImage />,
             title: "24/7 Support",
             description:
               "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
           },
           {
-            imageSrc: ShieldIconImage,
+            image: <ShieldIconImage />,
             title: "Strong Teams",
             description:
               "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
           },
           {
-            imageSrc: CustomerLoveIconImage,
+            image: <CustomizeIconImage/>,
             title: "Customer Satisfaction",
             description:
               "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
@@ -59,7 +60,6 @@ export default () => {
         ]}
         linkText=""
       />
-      <TeamCardGrid subheading={<Subheading>Our Team</Subheading>} />
     </Page>
   )
 }
