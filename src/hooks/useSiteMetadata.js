@@ -10,6 +10,8 @@ export const useSiteMetadata = () => {
             title
             image
             siteUrl
+            siteName
+            titleSeparator
             siteLanguage
             siteLocale
             twitterUsername

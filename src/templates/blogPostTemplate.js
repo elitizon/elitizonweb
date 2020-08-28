@@ -29,6 +29,8 @@ export default ({ data, pageContext }) => {
   const {
     image,
     siteUrl,
+    siteName, 
+    titleSeparator,
     siteLanguage,
     siteLocale,
     twitterUsername,
@@ -45,6 +47,8 @@ export default ({ data, pageContext }) => {
     <>
       <SEO
         title={title}
+        titleTemplate={siteName}
+        titleSeparator={titleSeparator}
         description={excerpt}
         image={
           cover === null ? `${siteUrl}${image}` : `${siteUrl}${cover.publicURL}`

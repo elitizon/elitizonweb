@@ -9,6 +9,7 @@ export const SiteSEO = (props) => {
     title,
     image,
     siteUrl,
+    siteName,
     siteLanguage,
     siteLocale,
     twitterUsername,
@@ -17,6 +18,7 @@ export const SiteSEO = (props) => {
   return (
     <SEO
     title={title}
+    titleTemplate = {siteName}
     description={description || `nothin’`}
     image={`${siteUrl}${image}`}
     pathname={siteUrl}

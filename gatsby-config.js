@@ -1,13 +1,14 @@
 const siteMetadata = {
-  title: `elitizon | Technology Venture Studio`,
-  description: `elitizon is a technology venture studio. We leverages deep experience and expertise to build and launch elite companies.
-  .`,
+  title: `We are a Technology Venture Studio`,
+  description: `Elitizon ltd. is a technology venture studio. We leverages deep experience and expertise to build and launch elite companies.`,
   image: `/default-site-image.jpg`,
   siteUrl: `https://www.elitizon.com`,
+  siteName: `elitizon`,
   siteLanguage: `en-GB`,
   siteLocale: `en_gb`,
   twitterUsername: `@ElitizonLtd`,
-  authorName: `Elitizon`,
+  titleSeparator: `|`,
+  authorName: `Elitizon Limited`,
   linkedinPage: `https://www.linkedin.com/company/elitizon`,
   facebookPage: `https://business.facebook.com/elitizonltd/`,
   twitterPage: `https://twitter.com/ElitizonLtd`,
@@ -47,7 +48,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 2000,
             },
           },
         ],
@@ -55,7 +56,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 2000,
             },
           },
         ],
