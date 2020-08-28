@@ -1,6 +1,7 @@
 import React from "react"
 import tw from "twin.macro"
 import styled from "styled-components"
+import { Link as LinkBase } from "gatsby"
 import { PrimaryButton as PrimaryButtonBase } from "../misc/Buttons.js"
 import { useSiteMetadata } from "../../hooks/useSiteMetadata"
 
@@ -20,7 +21,8 @@ const ColumnHeading = tw.h5`uppercase font-bold`
 
 const LinkList = tw.ul`mt-6 text-sm font-medium`
 const LinkListItem = tw.li`mt-3`
-const Link = tw.a`border-b-2 border-transparent hocus:border-gray-700 pb-1 transition duration-300`
+//const Link = tw.a`border-b-2 border-transparent hocus:border-gray-700 pb-1 transition duration-300`
+const Link = tw(LinkBase)`border-b-2 border-transparent hocus:border-gray-700 pb-1 transition duration-300`
 
 const SubscribeNewsletterColumn = tw(
   Column
@@ -66,10 +68,10 @@ export default () => {
             <ColumnHeading>Main</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="/Blog">Blog</Link>
+                <Link to="/Blog">Blog</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="/#">About Us</Link>
+                <Link to="/#">About Us</Link>
               </LinkListItem>
             </LinkList>
           </Column>
@@ -119,16 +121,13 @@ export default () => {
             <ColumnHeading>Legal</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="/legal/privacy">GDPR</Link>
+                <Link to="/legal/privacy">Privacy Policy</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="/legal/privacy">Privacy Policy</Link>
+                <Link to="/legal/terms-of-service">Terms of Service</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Terms of Service</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Disclaimer</Link>
+                <Link to="/legal/disclaimer">Disclaimer</Link>
               </LinkListItem>
             </LinkList>
           </Column>
@@ -137,7 +136,7 @@ export default () => {
               <ColumnHeading>Subscribe to our Newsletter</ColumnHeading>
               <SubscribeText>
                 We deliver high quality blog posts written by professionals
-                weekly. And we promise no spam.
+                monthly. And we promise no spam.
               </SubscribeText>
               <SubscribeForm method="get" action="#">
                 <Input type="email" placeholder="Your Email Address" />

@@ -1,32 +1,6 @@
 import React from "react"
 import { Page } from "../../components/Page"
-import tw from "twin.macro"
-import styled from "styled-components"
-
-const Container = styled.div`
-  h1 {
-    ${tw`text-2xl my-4 font-bold`}
-  }
-  h2 {
-    ${tw`text-xl my-3 font-semibold`}
-  }
-  h3 {
-    ${tw`text-xl my-3 font-medium`}
-  }
-  p {
-    ${tw`my-2 text-justify text-gray-600`}
-  }
-
-  li {
-    ${tw`mx-2 my-2 text-gray-600`}
-  }
-
-  a {
-    ${tw`hover:text-primary-500 text-gray-800`}
-  }
-  ${tw`mb-20 mt-20`}
-
-`
+import { Container } from "./HtmlContainer"
 
 export default () => {
   return (

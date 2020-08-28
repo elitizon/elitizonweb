@@ -12,6 +12,7 @@ export const SiteSEO = (props) => {
     siteName,
     siteLanguage,
     siteLocale,
+    titleSeparator,
     twitterUsername,
   } = useSiteMetadata() 
 
@@ -24,6 +25,7 @@ export const SiteSEO = (props) => {
     pathname={siteUrl}
     siteLanguage={siteLanguage}
     siteLocale={siteLocale}
+    titleSeparator= {titleSeparator}
     twitterUsername={twitterUsername}
    />
   )
