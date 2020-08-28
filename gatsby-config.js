@@ -99,6 +99,10 @@ module.exports = {
       options: { path: `${__dirname}/data`, name: `data` },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: { path: `${__dirname}/src/images`, name: `images` },
+    },
+    {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
