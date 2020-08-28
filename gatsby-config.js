@@ -12,8 +12,17 @@ const siteMetadata = {
   linkedinPage: `https://www.linkedin.com/company/elitizon`,
   facebookPage: `https://business.facebook.com/elitizonltd/`,
   twitterPage: `https://twitter.com/ElitizonLtd`,
-  youtubePage: ``
+  youtubePage: ``,
 }
+
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = siteMetadata.siteUrl,
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === "production"
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
   siteMetadata: siteMetadata,
@@ -23,9 +32,32 @@ module.exports = {
       resolve: "gatsby-plugin-svgr-loader",
       options: {
         rule: {
-          include: /\.svg$/ // // See below to configure properly
-        }
-      }
+          include: /\.svg$/, // // See below to configure properly
+        },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        host: `${siteMetadata.siteUrl}`,
+        sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,
+        env: {
+          production: {
+            policy: [{ userAgent: "*" }],
+          },
+          "branch-deploy": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+          "deploy-preview": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+        },
+      },
     },
     `gatsby-plugin-sharp`,
     {
@@ -34,10 +66,10 @@ module.exports = {
         name: `elitizon`,
         short_name: `elitizon`,
         background_color: `#2A3045`,
-        theme_color: `#FA3366`,         
+        theme_color: `#FA3366`,
         display: `elitizon`,
-        icon: `src/images/elitizon-icon.svg`
-      }
+        icon: `src/images/elitizon-icon.svg`,
+      },
     },
     `gatsby-transformer-sharp`,
     {
@@ -69,7 +101,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        postCssPlugins: [require("tailwindcss"),require("autoprefixer")],
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
       },
     },
     {
@@ -78,7 +110,7 @@ module.exports = {
         printRejected: false,
         develop: false,
         tailwind: true,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-sitemap`,
@@ -87,7 +119,7 @@ module.exports = {
         // Exclude specific pages or groups of pages using glob parameters
         // See: https://github.com/isaacs/minimatch
         // The example below will exclude the single `path/to/page` and all routes beginning with `category`
-        exclude: [`/test*`, `/path/to/page`,`/404/*`],
+        exclude: [`/test*`, `/path/to/page`, `/404/*`],
         query: `
           {
             site {
@@ -102,19 +134,19 @@ module.exports = {
               }
             }
         }`,
-        resolveSiteUrl: ({site, allSitePage}) => {
+        resolveSiteUrl: ({ site, allSitePage }) => {
           //Alternatively, you may also pass in an environment variable (or any location) at the beginning of your `gatsby-config.js`.
           return site.siteMetadata.siteUrl
         },
         serialize: ({ site, allSitePage }) =>
-          allSitePage.nodes.map(node => {
+          allSitePage.nodes.map((node) => {
             return {
               url: `${site.siteMetadata.siteUrl}${node.path}`,
               changefreq: `daily`,
               priority: 0.7,
             }
-          })
-      }
-    }
+          }),
+      },
+    },
   ],
 }
