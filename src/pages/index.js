@@ -1,5 +1,6 @@
 import React from "react"
 import tw from "twin.macro"
+import Img from "gatsby-image"
 import MainFeature1 from "../components/features/TwoColWithButton.js"
 import Features from "../components/features/ThreeColSimple.js"
 
@@ -12,57 +13,94 @@ import { Page } from "../components/Page"
 const StrongText = tw.span`text-gray-800`
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`
-export default () => {
+export default ({data}) => {
   return (
     <Page>
-      <MainFeature1 noanimation
+      <MainFeature1
+        noanimation
         subheading={<Subheading>Technology Venture Studio</Subheading>}
         heading="We launch 🚀 innovative products."
-        description={(<>As a technology venture studio we develop <StrongText>ideas</StrongText> into <StrongText>products</StrongText> and products into <StrongText>companies</StrongText>.</>)}
+        description={
+          <>
+            As a technology venture studio we develop{" "}
+            <StrongText>ideas</StrongText> into{" "}
+            <StrongText>products</StrongText> and products into{" "}
+            <StrongText>companies</StrongText>.
+          </>
+        }
         buttonRounded={false}
         primaryButtonText="Discover our mission"
+        imageFluid={data.image1.childImageSharp.fluid}
         imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
         imageShadow={false}
         imageCss="hover:scale-150 transition duration-300 transform ease-in-out"
-        primaryButtonUrl = "/ContactUs"
+        primaryButtonUrl="/ContactUs"
       />
-      <MainFeature1 
+      <MainFeature1
         subheading={<Subheading>From Zero to One</Subheading>}
         heading={<>Where Elite Companies Are Forged 🔥</>}
-        description = {<>We leverage deep experience and expertise to build and launch successful product companies.</>}
+        description={
+          <>
+            We leverage deep experience and expertise to build and launch
+            successful product companies.
+          </>
+        }
         buttonRounded={false}
-        primaryButtonText= {false && <>Our process</>}
+        primaryButtonText={false && <>Our process</>}
         imageSrc="https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
+        imageFluid={data.image2.childImageSharp.fluid}
         textOnLeft={false}
-        primaryButtonUrl = "/#"
+        primaryButtonUrl="/#"
       />
-       {false && <Features
-        subheading={<Subheading>Our Values</Subheading>}
-        heading="We follow these."
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        cards={[
-          {
-            image: <SupportIconImage />,
-            title: "24/7 Support",
-            description:
-              "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
-          },
-          {
-            image: <ShieldIconImage />,
-            title: "Strong Teams",
-            description:
-              "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
-          },
-          {
-            image: <CustomizeIconImage/>,
-            title: "Customer Satisfaction",
-            description:
-              "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
-          },
-        ]}
-        linkText=""
-      />}
+      {false && (
+        <Features
+          subheading={<Subheading>Our Values</Subheading>}
+          heading="We follow these."
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          cards={[
+            {
+              image: <SupportIconImage />,
+              title: "24/7 Support",
+              description:
+                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
+            },
+            {
+              image: <ShieldIconImage />,
+              title: "Strong Teams",
+              description:
+                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
+            },
+            {
+              image: <CustomizeIconImage />,
+              title: "Customer Satisfaction",
+              description:
+                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
+            },
+          ]}
+          linkText=""
+        />
+      )}
       <div tw="mt-20"></div>
+    
     </Page>
   )
 }
+
+export const query = graphql`
+  query SITE_HOME_QUERY {
+    image2: file(relativePath: { eq: "photo-computer-code1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 780) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image1: file(relativePath: { eq: "photo-computer-on-table1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 780) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
