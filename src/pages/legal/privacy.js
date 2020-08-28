@@ -1,6 +1,6 @@
 import React from "react"
 import { Page } from "../../components/Page"
-import { Container } from "./HtmlContainer"
+import { Container } from "../../components/HtmlContainer"
 
 export default () => {
   return (
