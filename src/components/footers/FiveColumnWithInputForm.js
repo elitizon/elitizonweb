@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import tw from "twin.macro"
 import styled from "styled-components"
-import { Link as LinkBase } from "gatsby"
+import { Link as LinkBase, useStaticQuery } from "gatsby"
+import addToMailchimp from "gatsby-plugin-mailchimp"
 import { PrimaryButton as PrimaryButtonBase } from "../misc/Buttons.js"
 import { useSiteMetadata } from "../../hooks/useSiteMetadata"
 
@@ -22,7 +23,9 @@ const ColumnHeading = tw.h5`uppercase font-bold`
 const LinkList = tw.ul`mt-6 text-sm font-medium`
 const LinkListItem = tw.li`mt-3`
 //const Link = tw.a`border-b-2 border-transparent hocus:border-gray-700 pb-1 transition duration-300`
-const Link = tw(LinkBase)`border-b-2 border-transparent hocus:border-gray-700 pb-1 transition duration-300`
+const Link = tw(
+  LinkBase
+)`border-b-2 border-transparent hocus:border-gray-700 pb-1 transition duration-300`
 
 const SubscribeNewsletterColumn = tw(
   Column
@@ -53,12 +56,32 @@ const SocialLink = styled.a`
 `
 
 export default () => {
+  const [email, setEmail] = useState("")
+
   const {
     linkedinPage,
     twitterPage,
     youtubePage,
     facebookPage,
   } = useSiteMetadata()
+
+  const _handleChangeEmail = (event) => {
+    setEmail(event.target.value)
+  }
+
+  const _handleSubmitNewsLetter = async (e) => {
+    if (!e) return
+    e.preventDefault()
+    try {
+      const result = await addToMailchimp(email)
+      // I recommend setting `result` to React state
+      // but you can do whatever you want
+      console.log(result)
+      setEmail("")
+    } catch (e) {
+      console.error(e)
+    }
+  }
 
   return (
     <Container>
@@ -138,8 +161,13 @@ export default () => {
                 We deliver high quality blog posts written by professionals
                 monthly. And we promise no spam.
               </SubscribeText>
-              <SubscribeForm method="get" action="#">
-                <Input type="email" placeholder="Your Email Address" />
+              <SubscribeForm onSubmit={_handleSubmitNewsLetter}>
+                <Input
+                  type="email"
+                  value={email}
+                  placeholder="Your Email Address"
+                  onChange={_handleChangeEmail}
+                />
                 <SubscribeButton type="submit">Subscribe</SubscribeButton>
               </SubscribeForm>
             </SubscribeNewsletterContainer>
