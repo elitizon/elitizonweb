@@ -81,7 +81,6 @@ function AnimatedSlideInComponent({
 export const Page = (props) => {
   return (
     <>
-      <SiteSEO />
       <Helmet>
         <meta name="google-site-verification" content="N4LdLhQ5cz8mZT6WpTlr1nbdwcJ5QAri_1-8ftKtkyg" />
       </Helmet>

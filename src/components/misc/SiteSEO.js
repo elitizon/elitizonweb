@@ -22,7 +22,7 @@ export const SiteSEO = (props) => {
     titleTemplate = {siteName}
     description={description || `nothin’`}
     image={`${siteUrl}${image}`}
-    pathname={siteUrl}
+    pathname={`${siteUrl}/${props.location}`}
     siteLanguage={siteLanguage}
     siteLocale={siteLocale}
     titleSeparator= {titleSeparator}

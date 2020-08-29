@@ -27,6 +27,13 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl,
+      },
+    },
     `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-plugin-svgr-loader",
@@ -152,12 +159,6 @@ module.exports = {
           }),
       },
     },
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
-      options: {
-        siteUrl,
-      },
-    }
+   
   ],
 }
