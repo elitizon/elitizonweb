@@ -1,8 +1,8 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { SiteSEO } from "./misc/SiteSEO"
 import Footer from "./footers/FiveColumnWithInputForm"
 import Header from "./headers/light"
+import { SiteSEO } from "../components/misc/SiteSEO"
 
 import tw from "twin.macro"
 
@@ -11,7 +11,7 @@ import tw from "twin.macro"
 import { motion } from "framer-motion"
 import useInView from "use-in-view"
 
-const StyledDiv = tw.div`font-poppins min-h-screen p-8 text-secondary-500 overflow-hidden`
+const StyledDiv = tw.div`font-display min-h-screen p-8 text-secondary-500 overflow-hidden`
 
 function AnimationReveal({ disabled, children }) {
   if (disabled) {
@@ -31,11 +31,7 @@ function AnimationReveal({ disabled, children }) {
     currentAnimation = chooseNextAnimationDirection(currentAnimation)
 
     if (child?.props?.noanimation) {
-      return (
-        <div>
-          <div key={i}>{child}</div>
-        </div>
-      )
+      return <div key={i}>{child}</div>
     }
 
     return (
@@ -81,8 +77,12 @@ function AnimatedSlideInComponent({
 export const Page = (props) => {
   return (
     <>
+      <SiteSEO />
       <Helmet>
-        <meta name="google-site-verification" content="N4LdLhQ5cz8mZT6WpTlr1nbdwcJ5QAri_1-8ftKtkyg" />
+        <meta
+          name="google-site-verification"
+          content="N4LdLhQ5cz8mZT6WpTlr1nbdwcJ5QAri_1-8ftKtkyg"
+        />
       </Helmet>
       <StyledDiv className="App">
         <Header noanimation />

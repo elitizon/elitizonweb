@@ -3,6 +3,7 @@ import tw from "twin.macro"
 import styled from "styled-components"
 import { css } from "styled-components/macro" //eslint-disable-line
 import Img from "gatsby-image" // to take image data and render it
+import { Link } from "gatsby"
 import {
   SectionHeading,
   Subheading as SubheadingBase,
@@ -15,10 +16,12 @@ const TeamIllustrationSrc = "/images/team-illustration-2.svg"
 const Container = tw.div`relative`
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto pt-20 md:pt-24  items-center`
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`
-const ImageColumnBase = tw(Column)`md:w-6/12 flex-shrink-0 relative overflow-hidden rounded`
+const ImageColumnBase = tw(
+  Column
+)`md:w-6/12 flex-shrink-0 relative overflow-hidden rounded`
 const ImageColumn = styled(ImageColumnBase)`
   img {
-    transition: transform .5s, filter 1.5s ease-in-out;
+    transition: transform 0.5s, filter 1.5s ease-in-out;
   }
 
   img:hover {
@@ -38,7 +41,7 @@ const Image = styled(Img)((props) => [
   props.imageRounded && tw`rounded`,
   props.imageBorder && tw`border`,
   props.imageShadow && tw`shadow`,
-  tw`hover:scale-110 transition duration-500 transform ease-in-out`
+  tw`hover:scale-110 transition duration-500 transform ease-in-out`,
 ])
 
 const DecoratorBlob = styled(SvgDotPattern)((props) => [
@@ -77,7 +80,7 @@ export default ({
   imageDecoratorBlob = false,
   imageDecoratorBlobCss = null,
   textOnLeft = true,
-  imageFluid = null
+  imageFluid = null,
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
@@ -100,14 +103,13 @@ export default ({
             <Subheading>{subheading}</Subheading>
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            {primaryButtonText && <PrimaryButton
-              buttonRounded={buttonRounded}
-              as="a"
-              href={primaryButtonUrl}
-            >
-              {primaryButtonText}
-            </PrimaryButton>
-            }
+            {primaryButtonText && (
+              <Link to={primaryButtonUrl}>
+                <PrimaryButton buttonRounded={buttonRounded}>
+                  {primaryButtonText}
+                </PrimaryButton>
+              </Link>
+            )}
           </TextContent>
         </TextColumn>
       </TwoColumn>
