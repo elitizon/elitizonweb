@@ -1,6 +1,6 @@
 const siteMetadata = {
   title: `We are a Technology Venture Studio`,
-  description: `Elitizon ltd. is a technology venture studio. We leverages deep experience and expertise to build and launch elite companies.`,
+  description: `We leverage deep experience and expertise to build and launch elite companies. Our mission is driven by turning ideas into products that delight users and products into incredible companies loved by customers.`,
   image: `/images/default-site-image.jpg`,
   siteUrl: `https://www.elitizon.com`,
   siteName: `elitizon`,
