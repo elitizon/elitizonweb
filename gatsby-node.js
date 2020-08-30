@@ -1,27 +1,81 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const path = require(`path`)
 
-exports.createPages = ({ actions, graphql }) => {
+// Create sites pages
+const createSitePages = ({ actions, graphql }) => {
+  const { createPage } = actions
+  const pageTemplate = path.resolve("src/templates/pageTemplate.js")
+
+  const regexFilter = "/.*/data/pages/.*.md(x?)$/i"
+
+  return graphql(`{
+  allMdx(
+    sort: {fields: [frontmatter___date], order: DESC}, 
+    filter: {
+      frontmatter: {published: {eq: true}}
+      fileAbsolutePath: {regex: "${regexFilter}" }
+    }
+  )
+  {
+    nodes {
+      fileAbsolutePath
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
+    }
+  }
+}`).then((result) => {
+    if (result.errors) {
+      throw result.errors
+    }
+
+    const posts = result.data.allMdx.nodes
+
+    // create page for each mdx node
+    posts.forEach((post) => {
+
+      createPage({
+        path: post.fields.slug,
+        component: pageTemplate,
+        context: {
+          slug: post.fields.slug,
+        },
+      })
+    })
+  })
+}
+
+// Create the blog pages
+
+const createBlogPages = ({ actions, graphql }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve("src/templates/blogPostTemplate.js")
 
-  return graphql(`
-    {
-      allMdx(
-        sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { published: { eq: true } } }
-      ) {
-        nodes {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-          }
-        }
+  const regexFilter = "/.*/data/blog/.*.md(x?)$/i"
+
+  return graphql(`{
+  allMdx(
+    sort: {fields: [frontmatter___date], order: DESC}, 
+    filter: {
+      frontmatter: {published: {eq: true}}
+      fileAbsolutePath: {regex: "${regexFilter}" }
+    }
+  )
+  {
+    nodes {
+      fileAbsolutePath
+      fields {
+        slug
+      }
+      frontmatter {
+        title
       }
     }
-  `).then((result) => {
+  }
+}`).then((result) => {
     if (result.errors) {
       throw result.errors
     }
@@ -44,6 +98,10 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
   })
+}
+
+exports.createPages = ({ actions, graphql }) => {
+  return createSitePages({ actions, graphql }) && createBlogPages({actions,graphql})
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

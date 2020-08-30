@@ -79,7 +79,7 @@ export default (props) => {
           <HeadingRow>
             <Heading>{headingText}</Heading>
           </HeadingRow>
-          <Posts >
+          <Posts>
             {posts.slice(0, visible).map((post, index) => (
               <PostContainer key={index} featured={post.featured}>
                 <Link to={post.url}>
@@ -126,11 +126,14 @@ const getPlaceholderPost = () => ({
   url: "https://reddit.com",
 })
 
+
 export const query = graphql`
   query SITE_BLOG_QUERY {
     allMdx(
       sort: { fields: [frontmatter___featured,frontmatter___date], order: [DESC,DESC] }
-      filter: { frontmatter: { published: { eq: true } } }
+      filter: { 
+          frontmatter: { published: { eq: true } posttype: { eq: "blog" } } 
+        }
     ) {
       nodes {
         id
