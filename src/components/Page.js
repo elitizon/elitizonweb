@@ -6,7 +6,7 @@ import Footer from "./footers/FiveColumnWithInputForm"
 import Header from "./headers/light"
 import { SiteSEO } from "../components/misc/SiteSEO"
 
-const StyledDiv = tw.div`font-display min-h-screen p-8 text-secondary-500 overflow-hidden`
+const StyledDiv = tw.div`font-inter min-h-screen p-8 text-secondary-500 overflow-hidden`
 
 
 export const Page = (props) => {

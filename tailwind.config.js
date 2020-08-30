@@ -277,6 +277,7 @@ module.exports = {
     fontFamily: {
       display: ['Poppins','Inter', 'system-ui'],
       poppins: ['Poppins','sans-serif'],
+      inter: ['Inter','sans-serif'],
       roboto: ["roboto", "sans-serif"],
       sans: [
         'system-ui',

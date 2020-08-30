@@ -60,6 +60,7 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.1.1",
     "twin.macro": "^1.7.0",
+    "typeface-inter": "^3.15.0",
     "typeface-poppins": "^0.0.72",
     "use-in-view": "^1.0.15"
   },
