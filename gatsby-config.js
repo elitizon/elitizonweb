@@ -95,8 +95,14 @@ module.exports = {
       },
     },
     {
+      // Get all the MDX file for the blog 
       resolve: `gatsby-source-filesystem`,
-      options: { path: `${__dirname}/data`, name: `data` },
+      options: { path: `${__dirname}/data/blog`, name: `post` },
+    },
+    {
+      // Get all the MDX file for the  pages 
+      resolve: `gatsby-source-filesystem`,
+      options: { path: `${__dirname}/data/pages`, name: `page` },
     },
     {
       resolve: `gatsby-source-filesystem`,
