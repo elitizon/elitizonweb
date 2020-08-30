@@ -6,7 +6,7 @@ import { Twitter } from './twitter'
 /*
 
  title cannot be more than 70 characters
- description cannot be more than 160 characters
+ description cannot be more than 300 characters
 
 */
 
@@ -191,7 +191,7 @@ export const SEO = ({
             image={image}
             desc={seo.description}
             username={twitterUsername}
-            site={pathname}
+            site={twitterUsername}
           />
         </>
       )}
