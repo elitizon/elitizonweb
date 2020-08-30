@@ -1,6 +1,6 @@
 import React from "react"
 import tw from "twin.macro"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
 import MainFeature1 from "../components/features/TwoColWithButton.js"
 import Features from "../components/features/ThreeColSimple.js"
 
@@ -82,7 +82,6 @@ export default (props) => {
         />
       )}
       <div tw="mt-20"></div>
-    
     </Page>
   )
 }

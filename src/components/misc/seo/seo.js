@@ -27,7 +27,7 @@ export const SEO = ({
 }) => {
   const seo = {
     title: title.slice(0, 70),
-    description: description.slice(0, 160),
+    description: description.slice(0, 300),
     datePublished: datePublished
       ? null
       : new Date(Date.now()).toISOString(),
@@ -191,6 +191,7 @@ export const SEO = ({
             image={image}
             desc={seo.description}
             username={twitterUsername}
+            site={pathname}
           />
         </>
       )}
