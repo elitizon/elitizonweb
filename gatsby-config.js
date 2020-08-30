@@ -181,6 +181,7 @@ module.exports = {
       },
     },
     {
+      // We use mailchimp for the newsletter subscription form
       resolve: 'gatsby-plugin-mailchimp',
       options: {
           endpoint: 'https://gmail.us17.list-manage.com/subscribe/post?u=b8e46dbefe081c2d2f2adc637&amp;id=237ff03d29', // string; add your MC list endpoint here; see instructions below
