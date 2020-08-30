@@ -1,6 +1,6 @@
 const siteMetadata = {
   title: `We are a Technology Venture Studio`,
-  description: `We leverage deep experience and expertise to build and launch elite companies. Our mission is driven by turning ideas into products that delight users and products into incredible companies loved by customers.`,
+  description: `Our mission is driven by turning ideas into products and products into incredible companies loved by customers.`,
   image: `/images/default-site-image.jpg`,
   siteUrl: `https://www.elitizon.com`,
   siteName: `elitizon`,
@@ -27,13 +27,6 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
-      options: {
-        siteUrl,
-      },
-    },
     `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-plugin-svgr-loader",
@@ -182,11 +175,12 @@ module.exports = {
     },
     {
       // We use mailchimp for the newsletter subscription form
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-          endpoint: 'https://gmail.us17.list-manage.com/subscribe/post?u=b8e46dbefe081c2d2f2adc637&amp;id=237ff03d29', // string; add your MC list endpoint here; see instructions below
-          timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+        endpoint:
+          "https://gmail.us17.list-manage.com/subscribe/post?u=b8e46dbefe081c2d2f2adc637&amp;id=237ff03d29", // string; add your MC list endpoint here; see instructions below
+        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
-  },
+    },
   ],
 }

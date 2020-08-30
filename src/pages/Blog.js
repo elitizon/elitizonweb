@@ -65,7 +65,8 @@ const getPosts = (data) => {
   })
 }
 
-export default ({ headingText = "Blog Posts", data }) => {
+export default (props) => {
+  const { headingText = "Blog Posts", data } = props
   const [visible, setVisible] = useState(7)
   const onLoadMoreClick = () => {
     setVisible((v) => v + 6)
@@ -78,7 +79,7 @@ export default ({ headingText = "Blog Posts", data }) => {
           <HeadingRow>
             <Heading>{headingText}</Heading>
           </HeadingRow>
-          <Posts>
+          <Posts >
             {posts.slice(0, visible).map((post, index) => (
               <PostContainer key={index} featured={post.featured}>
                 <Link to={post.url}>

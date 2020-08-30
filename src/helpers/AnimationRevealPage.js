@@ -27,8 +27,8 @@ function AnimationReveal({ disabled, children }) {
     currentAnimation = chooseNextAnimationDirection(currentAnimation)
 
     if (child.props?.noanimation) {
-      return <div>
-          <div key={i}>{child}</div>
+      return <div key={i}>
+          <div>{child}</div>
       </div>
     }
 

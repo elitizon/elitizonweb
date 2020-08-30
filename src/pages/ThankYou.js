@@ -12,9 +12,9 @@ const ImageContainer = styled(tw.div`rounded w-full h-full`)`
 `
 
 
-export default () => {
+export default (props) => {
   return (
-    <Page>
+    <Page {...props}>
       <div tw="w-full flex flex-col justify-center mt-10 py-20">
           <div tw="text-center">
             <span tw="sm:text-5xl text-4xl text-primary-500 font-bold">Thanks You !</span>

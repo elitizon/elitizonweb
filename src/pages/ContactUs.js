@@ -25,9 +25,9 @@ const emailPlaceholder = `Your business email *`
 const subjectPlaceholder = `Subject`
 const messagePlaceholder = `How can we help? *`
 
-export default () => {
+export default (props) => {
   return (
-    <Page>
+    <Page {...props}>
       <ContactForm
         heading={heading}
         description={description}

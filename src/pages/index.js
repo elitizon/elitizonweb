@@ -13,9 +13,10 @@ import { Page } from "../components/Page"
 const StrongText = tw.span`text-gray-800`
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`
-export default ({data}) => {
+export default (props) => {
+  const { data } = props
   return (
-    <Page>
+    <Page {...props}>
       <MainFeature1
         noanimation
         subheading={<Subheading>Technology Venture Studio</Subheading>}
