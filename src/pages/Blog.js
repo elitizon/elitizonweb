@@ -11,11 +11,12 @@ import { Page } from "../components/Page"
 
 import { formatDate } from "../utils/formatDate"
 
+
 const HeadingRow = tw.div`flex`
-const Heading = tw(SectionHeading)`text-gray-900`
+const Heading = tw(SectionHeading)`text-secondary-500`
 const Posts = tw.div`mt-6 sm:-mr-8 flex flex-wrap`
 const PostContainer = styled.div`
-  ${tw`mt-10 w-full sm:w-1/2 lg:w-1/3 sm:pr-8 `}
+  ${tw`mt-10 w-full sm:w-1/2 lg:w-1/3 sm:pr-8`}
   ${(props) =>
     props.featured &&
     css`
@@ -34,7 +35,7 @@ const PostContainer = styled.div`
       }
     `}
 `
-const Post = tw.div`cursor-pointer flex flex-col bg-gray-100 rounded-lg`
+const Post = tw.div`cursor-pointer flex flex-col bg-gray-100 rounded-lg `
 const ImageContainer = styled.div`
   ${tw`h-64 w-full rounded-t-lg`}
 `
@@ -141,7 +142,7 @@ export const query = graphql`
               sizes(maxWidth: 1440, traceSVG: { color: "#FA3366" }) {
                 ...GatsbyImageSharpSizes_tracedSVG
               }
-              fluid(maxWidth: 600) {
+              fluid(maxWidth: 1440) {
                 sizes
                 src
                 srcSet
