@@ -42,8 +42,8 @@ export default (props) => {
         heading={<>Where Elite Companies Are Forged 🔥</>}
         description={
           <>
-            We leverage deep experience and expertise to build and launch
-            successful product companies.
+            We leverage <StrongText>specific knownledge</StrongText>, <StrongText>teams</StrongText> and <StrongText>capital</StrongText> to build and launch
+            successful <StrongText>product companies</StrongText>.
           </>
         }
         buttonRounded={false}
