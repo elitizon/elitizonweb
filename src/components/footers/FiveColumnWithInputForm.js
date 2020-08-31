@@ -18,7 +18,7 @@ const SixColumns = tw.div`flex flex-wrap text-center sm:text-left justify-center
 
 const Column = tw.div`px-4 sm:px-0 sm:w-1/4 md:w-auto mt-12`
 
-const ColumnHeading = tw.h5`uppercase font-bold`
+const ColumnHeading = tw.h3`uppercase font-bold`
 
 const LinkList = tw.ul`mt-6 text-sm font-medium`
 const LinkListItem = tw.li`mt-3`
@@ -43,7 +43,7 @@ const Divider = tw.div`my-16 border-b-2 border-gray-300 w-full`
 const ThreeColRow = tw.div`flex flex-col md:flex-row items-center justify-between`
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`
-const LogoText = tw.h5`ml-2 text-xl font-black tracking-wider text-gray-800`
+const LogoText = tw.h3`ml-2 text-xl font-black tracking-wider text-gray-800`
 
 const CopywrightNotice = tw.p`text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-500`
 
@@ -163,6 +163,9 @@ export default () => {
               </SubscribeText>
               <SubscribeForm onSubmit={_handleSubmitNewsLetter}>
                 <Input
+                  aria-label="email"
+                  aria-required="true"
+                  name="email"
                   type="email"
                   value={email}
                   placeholder="Your Email Address"
@@ -183,23 +186,25 @@ export default () => {
           </CopywrightNotice>
           <SocialLinksContainer>
             {facebookPage && (
-              <SocialLink href={facebookPage}>
-                <FacebookIcon />
+              <SocialLink
+                href={facebookPage}
+              >
+                <FacebookIcon alt="facebook" alt="facebook" aria-label="Facebook"/>
               </SocialLink>
             )}
             {twitterPage && (
-              <SocialLink href={twitterPage}>
-                <TwitterIcon />
+              <SocialLink href={twitterPage} aria-label="Twitter">
+                <TwitterIcon alt="twitter" />
               </SocialLink>
             )}
             {youtubePage && (
-              <SocialLink href={youtubePage}>
-                <YoutubeIcon />
+              <SocialLink href={youtubePage}  aria-label="Youtube">
+                <YoutubeIcon alt="youtube"/>
               </SocialLink>
             )}
             {linkedinPage && (
-              <SocialLink href={linkedinPage}>
-                <LinkedinIcon />
+              <SocialLink href={linkedinPage} aria-label="LinkedIn">
+                <LinkedinIcon alt="linkedin"/>
               </SocialLink>
             )}
           </SocialLinksContainer>

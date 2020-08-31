@@ -91,7 +91,7 @@ export default ({
    * If you manipulate links here, all the styling on the links is already done for you. If you pass links yourself though, you are responsible for styling the links or use the helper styled components that are defined here (NavLink)
    */
   const defaultLinks = [
-    <NavLinks key={1}>
+    <NavLinks key={1} role="navigation" aria-label="main navigation"> 
       <NavLink to="/#">Home</NavLink>
       <NavLink to="/Blog">Blog</NavLink>
       <NavLink to="/ContactUs">Contact Us</NavLink>
@@ -113,8 +113,8 @@ export default ({
     collapseBreakPointCssMap[collapseBreakpointClass]
 
   const defaultLogoLink = (
-    <LogoLink to="/">
-      <Logo tw="sm:h-12 h-8"></Logo>
+    <LogoLink to="/" aria-label="Home page">
+      <Logo tw="sm:h-12 h-8" alt="logo"></Logo>
     </LogoLink>
   )
 
@@ -140,9 +140,10 @@ export default ({
           >
             {links}
           </MobileNavLinks>
-          <NavToggle
+          <NavToggle 
             onClick={toggleNavbar}
             className={showNavLinks ? "open" : "closed"}
+            aria-label={showNavLinks ? "open" : "closed"}
           >
             {showNavLinks ? (
               <CloseIcon tw="w-6 h-6" />
