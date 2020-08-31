@@ -4,13 +4,10 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import tw from "twin.macro"
 import { Container, ContentWithPaddingXl } from "../components/misc/Layouts"
 import SEO from "../components/misc/seo"
-import AnimationRevealPage from "../helpers/AnimationRevealPage.js"
-import Header from "../components/headers/light.js"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
+import { Page } from "../components/Page"
 
 const PostContent = tw.div``
-
 
 export default ({ data }) => {
   const {
@@ -29,7 +26,7 @@ export default ({ data }) => {
   const publishedDate = new Date(date).toISOString()
 
   return (
-    <>
+    <Page>
       <SEO
         title={title}
         titleTemplate={siteName}
@@ -47,18 +44,14 @@ export default ({ data }) => {
         publishedDate={publishedDate}
         modifiedDate={new Date(Date.now()).toISOString()}
       />
-      <AnimationRevealPage>
-        <Header noanimation />
-        <Container noanimation>
-          <ContentWithPaddingXl>
-            <PostContent className="markdown">
-              <MDXRenderer>{body}</MDXRenderer>
-            </PostContent>
-          </ContentWithPaddingXl>
-        </Container>
-        <Footer noanimation />
-      </AnimationRevealPage>
-    </>
+      <Container noanimation>
+        <ContentWithPaddingXl>
+          <PostContent className="markdown">
+            <MDXRenderer>{body}</MDXRenderer>
+          </PostContent>
+        </ContentWithPaddingXl>
+      </Container>
+    </Page>
   )
 }
 
