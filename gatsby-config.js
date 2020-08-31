@@ -1,7 +1,7 @@
 const siteMetadata = {
   title: `We are a Technology Venture Studio`,
   description: `Our mission is driven by turning ideas into products and products into incredible companies loved by customers.`,
-  image: `/images/default-site-card.jpg`,
+  image: `/images/default-site-image.jpg`,
   siteUrl: `https://www.elitizon.com`,
   siteName: `elitizon`,
   siteLanguage: `en-GB`,

@@ -1,7 +1,7 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { Facebook } from './facebook'
-import { Twitter } from './twitter'
+import React from "react"
+import { Helmet } from "react-helmet"
+import { Facebook } from "./facebook"
+import { Twitter } from "./twitter"
 
 /*
 
@@ -15,25 +15,21 @@ export const SEO = ({
   titleTemplate,
   titleSeparator,
   description,
-  pathname = '',
+  pathname = "",
   article = false,
   image,
   siteLanguage,
   siteLocale,
   twitterUsername,
-  author = 'John Doe.',
+  author = "John Doe.",
   datePublished,
   dateModified,
 }) => {
   const seo = {
     title: title.slice(0, 70),
     description: description.slice(0, 300),
-    datePublished: datePublished
-      ? null
-      : new Date(Date.now()).toISOString(),
-    dateModified: dateModified
-      ? null
-      : new Date(Date.now()).toISOString(),
+    datePublished: datePublished ? null : new Date(Date.now()).toISOString(),
+    dateModified: dateModified ? null : new Date(Date.now()).toISOString(),
   }
 
   const copyrightYear = new Date().getFullYear()
@@ -45,8 +41,8 @@ export const SEO = ({
   // https://search.google.com/structured-data/testing-tool
 
   const schemaOrgWebPage = {
-    '@context': 'http://schema.org',
-    '@type': 'WebPage',
+    "@context": "http://schema.org",
+    "@type": "WebPage",
     url: pathname,
     headline: seo.description,
     inLanguage: siteLanguage,
@@ -54,26 +50,26 @@ export const SEO = ({
     description: seo.description,
     name: seo.title,
     author: {
-      '@type': 'Person',
+      "@type": "Person",
       name: author,
     },
     copyrightHolder: {
-      '@type': 'Person',
+      "@type": "Person",
       name: author,
     },
     copyrightYear,
     creator: {
-      '@type': 'Person',
+      "@type": "Person",
       name: author,
     },
     publisher: {
-      '@type': 'Person',
+      "@type": "Person",
       name: author,
     },
     datePublished: seo.datePublished,
     dateModified: seo.dateModified,
     image: {
-      '@type': 'ImageObject',
+      "@type": "ImageObject",
       url: `${image}`,
     },
   }
@@ -82,10 +78,10 @@ export const SEO = ({
 
   const itemListElement = [
     {
-      '@type': 'ListItem',
+      "@type": "ListItem",
       item: {
-        '@id': pathname,
-        name: 'Homepage',
+        "@id": pathname,
+        name: "Homepage",
       },
       position: 1,
     },
@@ -95,26 +91,26 @@ export const SEO = ({
 
   if (article) {
     schemaArticle = {
-      '@context': 'http://schema.org',
-      '@type': 'Article',
+      "@context": "http://schema.org",
+      "@type": "Article",
       author: {
-        '@type': 'Person',
+        "@type": "Person",
         name: author,
       },
       copyrightHolder: {
-        '@type': 'Person',
+        "@type": "Person",
         name: author,
       },
       copyrightYear,
       creator: {
-        '@type': 'Person',
+        "@type": "Person",
         name: author,
       },
       publisher: {
-        '@type': 'Organization',
+        "@type": "Organization",
         name: author,
         logo: {
-          '@type': 'ImageObject',
+          "@type": "ImageObject",
           url: `${image}`,
         },
       },
@@ -126,16 +122,16 @@ export const SEO = ({
       url: pathname,
       name: seo.title,
       image: {
-        '@type': 'ImageObject',
+        "@type": "ImageObject",
         url: image,
       },
       mainEntityOfPage: pathname,
     }
     // Push current blog post into breadcrumb list
     itemListElement.push({
-      '@type': 'ListItem',
+      "@type": "ListItem",
       item: {
-        '@id': pathname,
+        "@id": pathname,
         name: seo.title,
       },
       position: 2,
@@ -143,10 +139,10 @@ export const SEO = ({
   }
 
   const breadcrumb = {
-    '@context': 'http://schema.org',
-    '@type': 'BreadcrumbList',
-    description: 'Breadcrumbs list',
-    name: 'Breadcrumbs',
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    description: "Breadcrumbs list",
+    name: "Breadcrumbs",
     itemListElement,
   }
 
@@ -158,7 +154,7 @@ export const SEO = ({
           titleSeparator ? titleSeparator : `·`
         } ${titleTemplate}`}
       >
-        <html lang={siteLanguage ? siteLanguage : 'en'} />
+        <html lang={siteLanguage ? siteLanguage : "en"} />
         <link rel="canonical" href={pathname} />
         <meta name="description" content={seo.description} />
 
@@ -172,26 +168,24 @@ export const SEO = ({
             {JSON.stringify(schemaArticle)}
           </script>
         )}
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumb)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
       </Helmet>
       {image && (
         <>
-          <Facebook
-            desc={seo.description}
-            image={image}
-            title={seo.title}
-            type={article ? 'article' : 'website'}
-            url={pathname}
-            locale={siteLocale ? siteLocale : 'en_gb'}
-          />
           <Twitter
             title={seo.title}
             image={image}
             desc={seo.description}
             username={twitterUsername}
             site={twitterUsername}
+          />
+          <Facebook
+            desc={seo.description}
+            image={image}
+            title={seo.title}
+            type={article ? "article" : "website"}
+            url={pathname}
+            locale={siteLocale ? siteLocale : "en_gb"}
           />
         </>
       )}
