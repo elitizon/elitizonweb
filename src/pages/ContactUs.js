@@ -1,6 +1,9 @@
 import React from "react"
+import tw  from "twin.macro"
 import { Page } from "../components/Page"
 import ContactForm from "../components/forms/TwoColContactUsWithIllustrationFullForm"
+
+const CallToActionHeader = tw.p`sm:text-2xl text-xl`
 
 const heading = (
   <>
@@ -11,9 +14,9 @@ const heading = (
 
 const description = (
   <>
-    <p tw="sm:text-2xl text-xl">
+    <CallToActionHeader>
       Get a free <span tw="text-primary-500">one-to-one</span> consultation.
-    </p>
+    </CallToActionHeader>
   </>
 )
 
@@ -25,7 +28,7 @@ const messagePlaceholder = `How can we help? *`
 
 export default (props) => {
   return (
-    <Page {...props}>
+    <Page>
       <ContactForm
         heading={heading}
         description={description}
@@ -38,5 +41,6 @@ export default (props) => {
         formMethod="POST"
       />
     </Page>
+    
   )
 }

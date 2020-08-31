@@ -86,7 +86,7 @@ export default (props) => {
                   <Post className="group">
                     {!!post.imageSizes ? (
                       <ImageContainer tw="overflow-hidden">
-                        <Img tw="h-full w-full" sizes={post.imageSizes} />
+                        <Img tw="h-full w-full" fluid={post.imageSizes} />
                       </ImageContainer>
                     ) : null}
                     <Info>
