@@ -24,10 +24,6 @@ const ImageContainer = styled(tw.div`rounded w-full h-full`)`
   }
 `
 
-const Image = styled.div((props) => [
-  `background-image: url("${props.imageSrc}");`,
-  tw`rounded bg-contain bg-no-repeat bg-center h-full`,
-])
 const TextContent = tw.div`lg:py-8 text-center md:text-left`
 
 const Subheading = tw(SubheadingBase)`text-center md:text-left`

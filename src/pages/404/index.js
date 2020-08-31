@@ -1,10 +1,8 @@
-import { graphql, Link } from "gatsby"
 import React from "react"
 import tw from "twin.macro"
 import styled from "styled-components"
 import {
   SectionHeading,
-  Subheading as SubheadingBase,
 } from "../../components/misc/Headings.js"
 import { Page } from "../../components/Page"
 import NotFoundLogo from "../../images/undraw_not_found_60pq.svg"
@@ -24,15 +22,8 @@ const ImageContainer = styled(tw.div`rounded w-full h-full`)`
     ${tw`w-full h-full`}
   }
 `
-
-const Image = styled.div((props) => [
-  `background-image: url("${props.imageSrc}");`,
-  tw`rounded bg-contain bg-no-repeat bg-center h-full`,
-])
 const TextContent = tw.div`lg:py-8 mt-4 text-gray-700 text-center md:text-left`
 
-
-const Subheading = tw(SubheadingBase)`text-center md:text-left`
 const Heading = tw(
   SectionHeading
 )`mt-4 font-black text-left text-4xl sm:text-5xl lg:text-6xl text-center md:text-left leading-tight`
@@ -43,19 +34,20 @@ export default () => {
     <Page>
       <Container>
         <TwoColumn>
-            <ImageColumn>
-              <ImageContainer>
-                <NotFoundLogo />
-              </ImageContainer>
-            </ImageColumn>
-            <TextColumn>
-              <Heading>Oops!</Heading>
-              <TextContent>We can't seem to find the page you're looking for.</TextContent>
-              <Description>Error code: 404</Description>
-            </TextColumn>
+          <ImageColumn>
+            <ImageContainer>
+              <NotFoundLogo />
+            </ImageContainer>
+          </ImageColumn>
+          <TextColumn>
+            <Heading>Oops!</Heading>
+            <TextContent>
+              We can't seem to find the page you're looking for.
+            </TextContent>
+            <Description>Error code: 404</Description>
+          </TextColumn>
         </TwoColumn>
       </Container>
     </Page>
   )
 }
-

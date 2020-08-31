@@ -1,6 +1,6 @@
-import { graphql, Link } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
+import { graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import tw from "twin.macro"
 import { Container, ContentWithPaddingXl } from "../components/misc/Layouts"
 import SEO from "../components/misc/seo"

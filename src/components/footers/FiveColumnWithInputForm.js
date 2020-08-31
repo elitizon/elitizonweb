@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import tw from "twin.macro"
 import styled from "styled-components"
-import { Link as LinkBase, useStaticQuery } from "gatsby"
+import { Link as LinkBase } from "gatsby"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import { PrimaryButton as PrimaryButtonBase } from "../misc/Buttons.js"
 import { useSiteMetadata } from "../../hooks/useSiteMetadata"

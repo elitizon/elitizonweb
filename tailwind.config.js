@@ -790,4 +790,5 @@ module.exports = {
   },
   corePlugins: {},
   plugins: [],
+  purge: false,
 }
