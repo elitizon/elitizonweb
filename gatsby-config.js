@@ -1,6 +1,6 @@
 const siteMetadata = {
   title: `We are a Technology Venture Studio`,
-  description: `Our mission is driven by turning ideas into products and products into incredible companies loved by customers.`,
+  description: `We leverage specific knowledge, teams and capital to launch elite companies. Our mission is driven by turning ideas into products that delight users and products into companies loved by customers.`,
   image: `/images/default-site-image.jpg`,
   siteUrl: `https://www.elitizon.com`,
   siteName: `elitizon`,
