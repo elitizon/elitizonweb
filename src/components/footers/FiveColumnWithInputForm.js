@@ -57,6 +57,8 @@ const SocialLink = styled.a`
 
 export default () => {
   const [email, setEmail] = useState("")
+  const [subscribed, setSubscribed] = useState(false)
+  const [subscribing, setSubscribing] = useState(false)
 
   const {
     linkedinPage,
@@ -73,13 +75,19 @@ export default () => {
     if (!e) return
     e.preventDefault()
     try {
+      setSubscribing(true)
       const result = await addToMailchimp(email)
       // I recommend setting `result` to React state
       // but you can do whatever you want
-      console.log(result)
       setEmail("")
     } catch (e) {
       console.error(e)
+   
+    }
+    finally
+    {
+      setSubscribing(false)
+      setSubscribed(true)
     }
   }
 
@@ -162,16 +170,21 @@ export default () => {
                 monthly. And we promise no spam.
               </SubscribeText>
               <SubscribeForm onSubmit={_handleSubmitNewsLetter}>
-                <Input
-                  aria-label="email"
-                  aria-required="true"
-                  name="email"
-                  type="email"
-                  value={email}
-                  placeholder="Your Email Address"
-                  onChange={_handleChangeEmail}
-                />
-                <SubscribeButton type="submit">Subscribe</SubscribeButton>
+                {!subscribed && (
+                  <Input
+                    aria-label="email"
+                    aria-required="true"
+                    name="email"
+                    type="email"
+                    value={email}
+                    placeholder="Your Email Address"
+                    onChange={_handleChangeEmail}
+                  />
+                )}
+                {subscribed && <span><strong>Newsletter subscribed</strong></span>}
+                {!subscribed && (
+                  <SubscribeButton type="submit" disabled={subscribing}>Subscribe</SubscribeButton>
+                )}
               </SubscribeForm>
             </SubscribeNewsletterContainer>
           </SubscribeNewsletterColumn>
@@ -186,10 +199,12 @@ export default () => {
           </CopywrightNotice>
           <SocialLinksContainer>
             {facebookPage && (
-              <SocialLink
-                href={facebookPage}
-              >
-                <FacebookIcon alt="facebook" alt="facebook" aria-label="Facebook"/>
+              <SocialLink href={facebookPage}>
+                <FacebookIcon
+                  alt="facebook"
+                  alt="facebook"
+                  aria-label="Facebook"
+                />
               </SocialLink>
             )}
             {twitterPage && (
@@ -198,13 +213,13 @@ export default () => {
               </SocialLink>
             )}
             {youtubePage && (
-              <SocialLink href={youtubePage}  aria-label="Youtube">
-                <YoutubeIcon alt="youtube"/>
+              <SocialLink href={youtubePage} aria-label="Youtube">
+                <YoutubeIcon alt="youtube" />
               </SocialLink>
             )}
             {linkedinPage && (
               <SocialLink href={linkedinPage} aria-label="LinkedIn">
-                <LinkedinIcon alt="linkedin"/>
+                <LinkedinIcon alt="linkedin" />
               </SocialLink>
             )}
           </SocialLinksContainer>
