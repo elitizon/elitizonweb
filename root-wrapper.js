@@ -1,7 +1,6 @@
 import { MDXProvider } from "@mdx-js/react"
 import React from "react"
 import Code from "./src/components/Code"
-import { SiteSEO } from "./src/components/misc/SiteSEO"
 
 const components = {
   pre: ({ children: { props } }) => {
