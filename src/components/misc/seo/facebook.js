@@ -8,9 +8,6 @@ export const Facebook = ({ url, type, title, desc, image, locale }) => (
     <meta property="og:type" content={type} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={desc} />
-    <meta property="og:image:width" content="768"/>
-    <meta property="og:image:height" content="384"/>
-    <meta property="og:image" content={image} />
     <meta property="og:image" content={image} />
     {image && image.indexOf("https" > -1) && (
       <meta property="og:image:secure_url" content={image} />
