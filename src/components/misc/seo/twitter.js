@@ -13,9 +13,7 @@ export const Twitter = ({
     <meta name="twitter:card" content={type} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={desc} />
-    {image && image.indexOf("https") === -1 && (
-      <meta name="twitter:image" content={image} />
-    )}
+    <meta name="twitter:image" content={image} />
     {image && image.indexOf("https" > -1) && (
       <meta name="twitter:image:secure_url" content={image} />
     )}
