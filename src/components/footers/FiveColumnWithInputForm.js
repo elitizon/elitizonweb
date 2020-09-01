@@ -10,6 +10,7 @@ import FacebookIcon from "../../images/facebook-icon.svg"
 import TwitterIcon from "../../images/twitter-icon.svg"
 import YoutubeIcon from "../../images/youtube-icon.svg"
 import LinkedinIcon from "../../images/linkedin-icon.svg"
+import GithubIcon from "../../images/github-icon.svg"
 
 const Container = tw.div`relative bg-gray-200 text-gray-700 -mb-8 -mx-8 px-8 py-20 lg:py-24`
 //const Container = tw.div`relative bg-gray-200 text-gray-700 py-20 lg:py-24 sm:px-8`
@@ -59,13 +60,14 @@ export default () => {
   const [email, setEmail] = useState("")
   const [subscribed, setSubscribed] = useState(false)
   const [subscribing, setSubscribing] = useState(false)
-  const [honeyBot,setHoneyBot] = useState("")
+  const [honeyBot, setHoneyBot] = useState("")
 
   const {
     linkedinPage,
     twitterPage,
     youtubePage,
     facebookPage,
+    githubPage,
   } = useSiteMetadata()
 
   const _handleChangeEmail = (event) => {
@@ -81,13 +83,12 @@ export default () => {
     e.preventDefault()
 
     // Verify if a bot has set the honey-bot field
-    if(honeyBot)
-      return
+    if (honeyBot) return
 
     // Verify if the email is valid
     if (
       !email.match(
-        /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/
+        /(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/
       )
     )
       return false
@@ -95,6 +96,7 @@ export default () => {
     try {
       setSubscribing(true)
       const result = await addToMailchimp(email)
+      console.dir(result)
       // I recommend setting `result` to React state
       // but you can do whatever you want
       setEmail("")
@@ -227,12 +229,15 @@ export default () => {
             &copy; 2020 elitizon ltd. All Rights Reserved.
           </CopywrightNotice>
           <SocialLinksContainer>
+            {githubPage && (
+              <SocialLink href={githubPage} aria-label="Github">
+                <GithubIcon alt="Github" />
+              </SocialLink>
+            )}
             {facebookPage && (
               <SocialLink href={facebookPage}>
                 <FacebookIcon
                   alt="facebook"
-                  alt="facebook"
-                  aria-label="Facebook"
                 />
               </SocialLink>
             )}

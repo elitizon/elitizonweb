@@ -16,6 +16,7 @@ export const useSiteMetadata = () => {
             siteLocale
             twitterUsername
             authorName
+            githubPage
             linkedinPage
             facebookPage
             twitterPage

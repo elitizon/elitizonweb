@@ -12,6 +12,7 @@ const siteMetadata = {
   linkedinPage: `https://www.linkedin.com/company/elitizon`,
   facebookPage: `https://business.facebook.com/elitizonltd/`,
   twitterPage: `https://twitter.com/ElitizonLtd`,
+  githubPage: `https://github.com/elitizon`,
   youtubePage: ``,
 }
 
