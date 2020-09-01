@@ -59,6 +59,7 @@ export default () => {
   const [email, setEmail] = useState("")
   const [subscribed, setSubscribed] = useState(false)
   const [subscribing, setSubscribing] = useState(false)
+  const [honeyBot,setHoneyBot] = useState("")
 
   const {
     linkedinPage,
@@ -71,9 +72,26 @@ export default () => {
     setEmail(event.target.value)
   }
 
+  const _handleChangeHoneyBot = (event) => {
+    setHoneyBot(event.target.value)
+  }
+
   const _handleSubmitNewsLetter = async (e) => {
     if (!e) return
     e.preventDefault()
+
+    // Verify if a bot has set the honey-bot field
+    if(honeyBot)
+      return
+
+    // Verify if the email is valid
+    if (
+      !email.match(
+        /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/
+      )
+    )
+      return false
+
     try {
       setSubscribing(true)
       const result = await addToMailchimp(email)
@@ -82,10 +100,7 @@ export default () => {
       setEmail("")
     } catch (e) {
       console.error(e)
-   
-    }
-    finally
-    {
+    } finally {
       setSubscribing(false)
       setSubscribed(true)
     }
@@ -170,6 +185,14 @@ export default () => {
                 monthly. And we promise no spam.
               </SubscribeText>
               <SubscribeForm onSubmit={_handleSubmitNewsLetter}>
+                <Input
+                  arial-label="honey-bot"
+                  name="honey-bot"
+                  type="string"
+                  value={honeyBot}
+                  hidden={true}
+                  onChange={_handleChangeHoneyBot}
+                />
                 {!subscribed && (
                   <Input
                     aria-label="email"
@@ -181,9 +204,15 @@ export default () => {
                     onChange={_handleChangeEmail}
                   />
                 )}
-                {subscribed && <span><strong>Newsletter subscribed</strong></span>}
+                {subscribed && (
+                  <span>
+                    <strong>Newsletter subscribed</strong>
+                  </span>
+                )}
                 {!subscribed && (
-                  <SubscribeButton type="submit" disabled={subscribing}>Subscribe</SubscribeButton>
+                  <SubscribeButton type="submit" disabled={subscribing}>
+                    Subscribe
+                  </SubscribeButton>
                 )}
               </SubscribeForm>
             </SubscribeNewsletterContainer>
