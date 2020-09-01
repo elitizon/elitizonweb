@@ -20,12 +20,6 @@ Using yarn
 yarn add tailwindcss postcss-cli autoprefixer -D
 ```
 
-Using npm
-
-```bash
-npm install tailwindcss postcss-cli autoprefixer -D
-```
-
 Then type this command in the terminal to create the default configuration
 
 ```bash
@@ -57,7 +51,7 @@ PostCSS is a tool for transforming styles with JS plugins. These plugins can lin
 Create an **assets** directory in the **src** folder
 
 ```bash
-mdkir ./src/assets
+mkdir ./src/assets
 ```
 
 Create a file called **taillwind.css** in ./src/assets
@@ -80,8 +74,8 @@ Modify the **package.json** file as follow:
 
 ```json
 "scripts": {
-    "start": "**npm run watch:css &&** react-scripts start",
-    "build": "**npm run build:css &&** react-scripts build",
+    "start": "yarn watch:css && react-scripts start",
+    "build": "yarn build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
