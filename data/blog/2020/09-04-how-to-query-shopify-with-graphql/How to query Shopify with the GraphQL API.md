@@ -251,7 +251,7 @@ Send cookies and store cookies must be **disabled**
 
 We can now test our query with a click on the send button
 
-![i16.png](./images/Untitled%2016.png)
+![i16.png](./images/i16.png)
 
 ### Et Voila !!
 
