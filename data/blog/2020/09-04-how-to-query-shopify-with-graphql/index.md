@@ -10,8 +10,6 @@ featured: true
 coverCredit: Raphaël MANSUY
 ---
 
-# How to query Shopify with the GraphQL API
-
 ## What problem do we solve
 
 [Shopify](https://www.shopify.com) provides an API that can be used to implement:
@@ -24,9 +22,9 @@ coverCredit: Raphaël MANSUY
 - [REST](https://shopify.dev/concepts/graphql)
 - [GraphQL](https://graphql.org/)
 
-GraphQL is now Shopify's technology of choice for building API. This article describes how to query Shopify with GraphQL using [Insomnia Core](https://insomnia.rest/) a powerful API client developped by the company [Kong](https://konghq.com/)
+GraphQL is now Shopify's technology of choice for building API. This article describes how to query Shopify with GraphQL using [Insomnia Core](https://insomnia.rest/) a powerful API client developed by the company [Kong](https://konghq.com/)
 
-### The graphQL Api
+### The graphQL API
 
 The Shopify test API is available at this **EndPoint**:
 
@@ -240,11 +238,11 @@ Configure the query to disable the cookies 🍪
 
 ![14.png](./images/i14.png)
 
-Send cookies and store cookies **must be disabled** 🍪 🔥
+**Send cookies** and **store cookies** 🍪 **must be disabled** 🔥
 
 ![15](./images/i15.png)
 
-We can now test our query with a click on the send button ▶️
+We can now test our query with a click on the **send button** ▶️
 
 ![i16.png](./images/i16.png)
 
