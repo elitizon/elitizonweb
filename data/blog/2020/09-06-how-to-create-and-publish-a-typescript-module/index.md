@@ -10,7 +10,7 @@ featured: true
 coverCredit: Martin SHREDER from Unsplash
 ---
 
-**This tutorial explains:**
+## This tutorial explains
 
 - How to configure a typescript package from zero
 - How to add the support of Jest for the unit tests
@@ -78,7 +78,6 @@ yarn add -D jest ts-jest
 ```
 
 ### Create a jest.config.js file to configure Jest
-
 
 ```js
 module.exports = {
@@ -298,7 +297,7 @@ git commit -m "First commit"
 
 An empty Github project must be created before publishing.
 
-The file ```package.json``` need to be updated as follow:
+The file **package.json** need to be updated as follow:
 
 ```json
   "repository": {
