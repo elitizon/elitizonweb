@@ -6,7 +6,7 @@ summary: Shopify provides a complete GraphQL API to access and modify the data s
 published: true
 cover: ./cover.jpg
 category: Development
-featured: true
+featured: false
 coverCredit: Raphaël MANSUY
 ---
 
