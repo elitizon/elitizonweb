@@ -19,12 +19,7 @@ coverCredit: Raphaël MANSUY
 
 This article explains how to use [Insomnia Core](https://insomnia.rest/) to query or update the data stored in Shopify using the GraphQL. Insomnia can help you to generate code for languages such as C#, Javascript, C, Swift ...
 
-**The** **Shopify API is proposed with 2 flavors:**
-
-- [REST](https://shopify.dev/concepts/graphql)
-- [GraphQL](https://graphql.org/)
-
-GraphQL is now Shopify's technology of choice for building API. This article describes how to query Shopify with GraphQL using [Insomnia Core](https://insomnia.rest/) a powerful API client developed by the company [Kong](https://konghq.com/)
+[Insomnia Core](https://insomnia.rest/) a powerful API client developed by the company [Kong](https://konghq.com/)
 
 ### The graphQL API
 
@@ -110,7 +105,7 @@ https://**{{ SHOPIFY_SHOP }}**.myshopify.com/admin/api/2020-07/graphql.json
 
 In order to query Shopify from an application such as a Web Application or a mobile application we need to create a **Private Application.**
 
-### Creation of a "Private Application" in Shopify
+#### Creation of a "Private Application" in Shopify
 
 A link "**Managed private apps**" is available in the "**Apps**" section of Shopify.
 
@@ -142,17 +137,17 @@ In **Apps** click on the button "**Create new private app"**
 
 ![i2.png](./images/i2.png)
 
-Enter the name of the application and the e-mail support:
+#### Enter the name of the application and the e-mail support
 
 ![i3.png](./images/i3.png)
 
-Configure the security policy for each entity
+#### Configure the security policy for each entity
 
 ![i4.png](./images/i4.png)
 
 Click save and create App on the dialog.
 
-Obtain the security parameters
+#### Obtain the security parameters
 
 ![i5.png](./images/i5.png)
 
