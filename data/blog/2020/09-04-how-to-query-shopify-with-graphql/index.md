@@ -2,7 +2,7 @@
 title: How to query Shopify with the GraphQL API and Insomnia
 posttype: blog
 date: 2020-09-04
-summary: Shopify provides a complete GraphQL API to access and modify stored in the back-office. This article explores how to query Shopify with an API Client such as Insomnia
+summary: Shopify provides a complete GraphQL API to access and modify the data stored in the back-office. This article explores how to query Shopify with an API Client such as Insomnia
 published: true
 cover: ./cover.jpg
 category: Development
@@ -16,6 +16,8 @@ coverCredit: Raphaël MANSUY
 
 - A mobile application connected to a Shopify Front Store
 - An integration pipeline with an external system such as a product management systems (PIM) or an enterprise resource planning (ERP)
+
+This article explains how to use [Insomnia Core](https://insomnia.rest/) to query or update the data stored in Shopify using the GraphQL. Insomnia can help you to generate code for languages such as C#, Javascript, C, Swift ...
 
 **The** **Shopify API is proposed with 2 flavors:**
 
