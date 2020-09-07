@@ -24,6 +24,9 @@ function AnimationReveal({ disabled, children }) {
 
   const childrenWithAnimation = children.map((child, i) => {
 
+    if(!child)
+      return
+
     currentAnimation = chooseNextAnimationDirection(currentAnimation)
 
     if (child.props?.noanimation) {

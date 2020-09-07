@@ -23,7 +23,7 @@ export default (props) => {
         heading="We launch 🚀 innovative products."
         description={
           <>
-            As a technology venture studio we develop{" "}
+            As a technology venture studio we transform{" "}
             <StrongText>ideas</StrongText> into{" "}
             <StrongText>products</StrongText> and products into{" "}
             <StrongText>companies</StrongText>.
@@ -35,7 +35,7 @@ export default (props) => {
         imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
         imageShadow={false}
         imageCss="hover:scale-150 transition duration-300 transform ease-in-out"
-        primaryButtonUrl="/ContactUs"
+        primaryButtonUrl="/OurMission"
       />
       <MainFeature1
         subheading={<Subheading>From Zero to One</Subheading>}
