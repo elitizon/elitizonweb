@@ -68,9 +68,6 @@ const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:t
 const f = tw.span`text-primary-500`
 
 const Content = styled(tw.div``)`
-  p:first-of-type {
-    ${tw`font-bold text-secondary-500`}
-  }
   p {
     ${tw`mt-6 ml-6 font-normal text-left text-secondary-500`}
   }
@@ -138,7 +135,7 @@ const ModuleIdea = () => (
           development.
         </p>
         <p>
-          <span tw="font-medium">
+          <span>
             We don't seek external capital for this phase.
           </span>
         </p>
@@ -167,7 +164,7 @@ const ModuleLaunch = () => (
           by ELITIZON or Business Angels.
         </p>
         <p>
-          <span tw="font-medium">
+          <span>
             If we measure high traction we{" "}
             <FocusContent>leverage capital</FocusContent> to accelerate the
             growth. We incorporate the product team into a new company and we
