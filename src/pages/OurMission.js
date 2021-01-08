@@ -3,20 +3,11 @@ import tw from "twin.macro"
 import styled from "styled-components"
 import { Page } from "../components/Page"
 
-import Img from "gatsby-image" // to take image data and render it
-import { Link } from "gatsby"
-
 import IdeaImage from "../images/undraw_ideation.svg"
 import ProductImage from "../images/undraw_mobile_marketing.svg"
 import GrowthImage from "../images/undraw_growth_curve.svg"
 
 const Container = tw.div`relative`
-
-const ImageContainer = styled(tw.div`rounded w-full h-full`)`
-  svg {
-    ${tw`w-full h-full`}
-  }
-`
 
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`
 
@@ -44,15 +35,6 @@ const TextColumn = styled(Column)(({ textOnLeft = true }) => [
     : tw`md:ml-12 lg:ml-16 md:order-last`
 ])
 
-const Image = styled(
-  Img
-)(({ imageRounded = false, imageBorder = false, imageShadow = false }) => [
-  imageRounded && tw`rounded`,
-  imageBorder && tw`border`,
-  imageShadow && tw`shadow`,
-  tw`transition duration-500 ease-in-out transform hover:scale-110`
-])
-
 const TextContent = tw.div`lg:py-8 text-center md:text-left`
 
 export const SectionHeading = tw.h3`text-4xl sm:text-5xl font-black tracking-wide text-center`
@@ -64,8 +46,6 @@ export const SubheadingBase = tw.h2`font-bold text-2xl sm:text-3xl text-primary-
 
 const Subheading = tw(SubheadingBase)`text-center md:text-left`
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`
-
-const f = tw.span`text-primary-500`
 
 const Content = styled(tw.div``)`
   p {
@@ -85,27 +65,27 @@ const Module = ({
 }) => {
   return (
     <Container>
-    <TwoColumn>
-      <ImageColumn>{image}</ImageColumn>
-      <TextColumn textOnLeft={textOnLeft}>
-        <TextContent>
-          <Subheading>{subheading}</Subheading>
-          <Heading>
-            <div tw="flex items-center justify-center space-x-4 sm:justify-start">
-              <div tw="bg-white rounded-full h-12 w-12 border-2 border-primary-500 relative font-medium text-2xl">
-                <div tw="absolute flex items-center justify-center inset-x-0 inset-y-0">
-                  {pill}
+      <TwoColumn>
+        <ImageColumn>{image}</ImageColumn>
+        <TextColumn textOnLeft={textOnLeft}>
+          <TextContent>
+            <Subheading>{subheading}</Subheading>
+            <Heading>
+              <div tw="flex items-center justify-center space-x-4 sm:justify-start">
+                <div tw="bg-white rounded-full h-12 w-12 border-2 border-primary-500 relative font-medium text-2xl">
+                  <div tw="absolute flex items-center justify-center inset-x-0 inset-y-0">
+                    {pill}
+                  </div>
+                </div>
+                <div tw="inline-block items-center justify-center py-0 font-bold">
+                  {heading}
                 </div>
               </div>
-              <div tw="inline-block items-center justify-center py-0 font-bold">
-                {heading}
-              </div>
-            </div>
-          </Heading>
-          <Description>{description}</Description>
-        </TextContent>
-      </TextColumn>
-    </TwoColumn>
+            </Heading>
+            <Description>{description}</Description>
+          </TextContent>
+        </TextColumn>
+      </TwoColumn>
     </Container>
   )
 }
@@ -135,9 +115,7 @@ const ModuleIdea = () => (
           development.
         </p>
         <p>
-          <span>
-            We don't seek external capital for this phase.
-          </span>
+          <span>We don't seek external capital for this phase.</span>
         </p>
       </Content>
     }
@@ -198,9 +176,9 @@ const ModuleScale = () => (
 export default () => {
   return (
     <Page>
-        <ModuleIdea />
-        <ModuleLaunch />
-        <ModuleScale />
+      <ModuleIdea />
+      <ModuleLaunch />
+      <ModuleScale />
     </Page>
   )
 }
