@@ -1,5 +1,5 @@
 ---
-title: Boost your productivity by creating your own CLI command with typescript (Part 2)
+title: Boost your productivity by creating your own CLI command with typescript and OCLIF (Part 2)
 posttype: blog
 date: 2021-01-20
 published: true
@@ -324,7 +324,6 @@ matcha-stock -s=MSFT
 ## Conclusion
 
 [OCLIF](https://oclif.io/) is an impressive framework. With OCLIF it's easy to create:
-@
 
 - Single-Command CLI
 - Multi-command CLI
