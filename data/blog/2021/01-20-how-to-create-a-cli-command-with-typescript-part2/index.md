@@ -3,7 +3,7 @@ title: Boost your productivity by creating your own CLI command with typescript 
 posttype: blog
 date: 2021-01-20
 published: true
-cover: ./cover.jpeg
+cover: ./cover.jpg
 summary: This article is a part of a series that describes how you can leverage typescript, npm, npx, and node to boost your productivity by developing your own command-line interface commands. This article explains how to leverage OCLIF framework to craft a command that delights your end-user 😻.
 category: nodejs, typescript, npm, npm, oclif
 featured: true
