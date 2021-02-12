@@ -9,7 +9,6 @@ category: nodejs, typescript, npm, npm, oclif
 featured: true
 coverCredit:
 ---
-
 ## Context
 
 [OCLIF](https://oclif.io/) is a wonderful framework that makes it easy to develop a professional CLI command. Let's see how we can create a CLI command that will delight your end-user in less than 3 minutes.
@@ -120,7 +119,7 @@ export = MatchaStock
 **Starting from the generated code I can:**
 
 - 💪 add **flags** such as **`--symbol`**
-- 🏗 modify the behavior the **`run()`** method
+- 🏗 modify the implementation of the **`run()`** method
 
 ### Add the support of the flag `--symbol` (40 seconds ⏰)
 
@@ -311,7 +310,7 @@ npm publish
 
 ✅ The package is now published on [npm.org](https://www.npmjs.org) at [https://www.npmjs.com/package/matcha-stock](https://www.npmjs.com/package/matcha-stock)
 
-- 👉 You must to change the name of the package if the package is already registered on [NPM](https://npmjs.com).
+- 👉 You have to change the name of the package if the package is already registered on [NPM](https://npmjs.com).
 - 👉 The package version must be updated each time you publish
 
 ### Test your command (10 seconds ⏰)
@@ -338,4 +337,4 @@ matcha-stock -s=MSFT
   - Plugins
   - Hooks
 
-OCLIF is available on [Github](https://github.com/oclif) and maintened by [Matt Graham](https://twitter.com/mattgraham), [Paul Elliott](https://github.com/paulelliott) and [Chris Castle](https://github.com/crcastle) and funded by [Heroku](https://www.heroku.com) 🎉
+OCLIF is available on [Github](https://github.com/oclif) and maintained by [Matt Graham](https://twitter.com/mattgraham), [Paul Elliott](https://github.com/paulelliott) and [Chris Castle](https://github.com/crcastle) and funded by [Heroku](https://www.heroku.com) 🎉

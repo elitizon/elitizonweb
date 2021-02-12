@@ -51,11 +51,11 @@ services:
       - POSTGRES_DB=todoapp
 ```
 
-- This file create a host called "db" from a Postgres version 13 image. The TCP port 5432 (postgres) of the host "db" is exposed externally as the TCP port 5432.
+- This file creates a host called "db" from a Postgres version 13 image. The TCP port 5432 (postgres) of the host "db" is exposed externally as TCP port 5432.
 
-- The local directory "./pgdata" is mapped as the "/var/lib/postgressql/data" inside the "db" host
+- The local directory "./pgdata" is mapped as "/var/lib/postprogressql/data" inside the "db" host
 
-- The user, password and database name are exposed as an environment variable
+- The username, password and database name are exposed as an environment variable
 
 ## Run the container in detached mode
 
@@ -63,7 +63,7 @@ services:
 $ docker-compose up -d
 ```
 
-## List docker
+## List of running docker containers
 
 ```shell
 $ docker-compose ps

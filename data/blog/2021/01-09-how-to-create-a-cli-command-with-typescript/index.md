@@ -16,8 +16,7 @@ Your **daily productivity** can be **greatly improved** 🚀 if you can **automa
 
 Thanks to **node, npm, npx and typescript**: creating a **CLI command** and making it available on your system or globally has never been easier.
 
-As an example, we will create a CLI command to get a stock value for a symbol. This command will be called **pique-sous** (as a reference to the Disney character "Uncle $crooge" in french 😄 🦆)
-
+As an example, we will create a CLI command to get a stock value for a symbol. This command will be called **pique-sous** (as a reference to the Disney character "Uncle \$crooge" in french 😄 🦆)
 
 ```bash
 $ pique-sous MSFT SFIX GOOG
@@ -53,7 +52,6 @@ The final results in available at [https://github.com/raphaelmansuy/pique-sous](
 This article was originally published at [https://www.elitizon.com/](https://www.elitizon.com/)
 
 ## 🏗 **6 Easy steps to make it happen !**
-
 
 ## Step1 : creating a basic typescript project
 
@@ -93,7 +91,7 @@ npx ts-node index.ts
 
 ```
 
-> **npx** is a tool from the NPM registry allowing exectuing of commands without installation
+> **npx** is a tool from the NPM registry allowing executing commands without installation
 > **ts-node** is a node version supporting typescript directly
 
 As a result you should have something like this:
@@ -148,13 +146,13 @@ $ npm init
 Answer the questions:
 
 ```bash
-package name: (pique-sous) 
-version: (1.0.0) 
+package name: (pique-sous)
+version: (1.0.0)
 description: A simple package
 entry point: (index.js) bin/index.js
-test command: 
-git repository: 
-keywords: 
+test command:
+git repository:
+keywords:
 author: raphael mansuy
 license: (ISC) MIT
 About to write to /Users/raphaelmansuy/Projects/Github/raphaelmansuy/ElitizonWeb/data/blog/2021/01-09-how-to-create-a-cli-command-with-typescript/steps/step01/pique-sous/package.json:
@@ -242,7 +240,7 @@ info All dependencies
 ✨  Done in 1.44s.
 ```
 
-The **package.json" should look like this:
+The **package.json** should look like this:
 
 ```json
 {
@@ -261,7 +259,6 @@ The **package.json" should look like this:
   }
 }
 ```
-
 
 ✅ Edit the **package.json** as follow
 
@@ -290,7 +287,7 @@ The **package.json" should look like this:
 
 ✅ Edit the **index.ts** as follow
 
-👉 replace npx ts-node by node because the result of the compilation by typescript compiler will be javascript file
+👉 replace npx ts-node by node because the result of the compilation by typescript compiler will be a javascript file
 
 ```typescript
 #!/usr/bin/env node
@@ -354,28 +351,28 @@ $ yarn link --global
 
 Result:
 
-```bash 
+```bash
 yarn link v1.22.10
 success Registered "pique-sous".
 info You can now run `yarn link "pique-sous"` in the projects where you want to use this package and it will be used instead.
 ✨  Done in 0.04s.
-``` 
+```
 
 🎉 💪 We can now use the command from everywhere
 
 ```bash
 ❯ pique-sous
 2021-01-10T05:45:10.586Z
-``` 
+```
 
-🌈 🙈 We can register the command with:
+🌈 🙈 We can unregister the command with:
 
 ```bash
 $ yarn unlink --global
 ```
 
 ## Step 5: publish the cli command on www.npmjs.org
-`
+
 👉 First, you need to signup and create an account on [https://www.npmjs.com/](https://www.npmjs.com/)
 👉 🧨 You need to be sure that the name of your package is not taken on npmjs.com, the name of the package in the package.json must be modified it the name already exists on npm.
 
@@ -390,28 +387,27 @@ Enter your npm credentials
 Result:
 
 ```bash
-npm notice 
+npm notice
 npm notice 📦  pique-sous@1.0.0
-npm notice === Tarball Contents === 
-npm notice 133B bin/index.js    
+npm notice === Tarball Contents ===
+npm notice 133B bin/index.js
 npm notice 198B bin/index.js.map
-npm notice 372B package.json    
-npm notice 100B src/index.ts    
-npm notice 364B tsconfig.json   
-npm notice === Tarball Details === 
-npm notice name:          pique-sous                              
-npm notice version:       1.0.0                                   
-npm notice filename:      pique-sous-1.0.0.tgz                    
-npm notice package size:  810 B                                   
-npm notice unpacked size: 1.2 kB                                  
+npm notice 372B package.json
+npm notice 100B src/index.ts
+npm notice 364B tsconfig.json
+npm notice === Tarball Details ===
+npm notice name:          pique-sous
+npm notice version:       1.0.0
+npm notice filename:      pique-sous-1.0.0.tgz
+npm notice package size:  810 B
+npm notice unpacked size: 1.2 kB
 npm notice shasum:        6c8aea7b85c125a2d9dbbeec81d15ef94b07240a
 npm notice integrity:     sha512-ozbnViT18DSUI[...]FquBcXBSV8f2g==
-npm notice total files:   5                                       
-npm notice 
+npm notice total files:   5
+npm notice
 ```
 
 **Your command is now published on npm** and be installed or executed from everywhere.
-
 
 Example:
 
@@ -427,11 +423,9 @@ Or global installation:
 npm install -g pique-sous
 ```
 
-
 ## Step 6: Add Yahoo finance get stocks information
 
 ✅ Install axios library
-
 
 ```bash
 yarn add axios
@@ -473,7 +467,7 @@ export const getSingleStockInfo = async (stock: string) => {
 }
 ```
 
-✅ Add file ./src/getVersion.ts
+✅ Add file "./src/getVersion.ts"
 
 ```typescript
 import * as fs from "fs"
@@ -561,17 +555,8 @@ symbols.forEach((symbol) => {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "cli",
-    "node",
-    "typescript",
-    "npm",
-    "stock",
-    "yahoo finance"
-  ],
-  "contributors": [
-    "raphaelmansuy"
-  ],
+  "keywords": ["cli", "node", "typescript", "npm", "stock", "yahoo finance"],
+  "contributors": ["raphaelmansuy"],
   "repository": {
     "url": "https://github.com/raphaelmansuy/pique-sous.git",
     "type": ""
@@ -627,30 +612,3 @@ Retrieving stock information for MSFT at date 2021-01-10T06:11:41.305Z
 ```
 
 🔥🔥🔥 The package can now be republished on **npm** 💪.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
