@@ -1,5 +1,5 @@
 ---
-title: Using ecs-cli to deploy a Docker compose stack on AWS
+title: 10 minutesto deploy a Docker compose stack on AWS illustred with Hasura and PostgresSQL
 posttype: blog
 date: 2021-03-09
 summary: ecs-cli allows you to deploy a Docker stack very easily on AWS ECS using the same syntax as the docker-compose file format version 1, 2 and 3.
