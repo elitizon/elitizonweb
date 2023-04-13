@@ -6,6 +6,7 @@ import { Container, ContentWithPaddingXl } from "../components/misc/Layouts"
 import SEO from "../components/misc/seo"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import { Page } from "../components/Page"
+import { MainLayout } from "../components/MainLayout"
 
 const PostContent = tw.div``
 
@@ -44,6 +45,7 @@ export default ({ data }) => {
         publishedDate={publishedDate}
         modifiedDate={new Date(Date.now()).toISOString()}
       />
+			<MainLayout>
       <Container noanimation>
         <ContentWithPaddingXl>
           <PostContent className="markdown">
@@ -51,6 +53,7 @@ export default ({ data }) => {
           </PostContent>
         </ContentWithPaddingXl>
       </Container>
+			</MainLayout>
     </Page>
   )
 }
