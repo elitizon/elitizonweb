@@ -6,7 +6,6 @@ import { Container, ContentWithPaddingXl } from "../components/misc/Layouts"
 import SEO from "../components/misc/seo"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import { Page } from "../components/Page"
-import { MainLayout } from "../components/MainLayout"
 
 const PostContent = tw.div``
 
