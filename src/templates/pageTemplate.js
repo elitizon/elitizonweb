@@ -45,7 +45,6 @@ export default ({ data }) => {
         publishedDate={publishedDate}
         modifiedDate={new Date(Date.now()).toISOString()}
       />
-			<MainLayout>
       <Container noanimation>
         <ContentWithPaddingXl>
           <PostContent className="markdown">
@@ -53,7 +52,6 @@ export default ({ data }) => {
           </PostContent>
         </ContentWithPaddingXl>
       </Container>
-			</MainLayout>
     </Page>
   )
 }
