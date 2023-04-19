@@ -24,7 +24,7 @@ Complete your application: Once you've received your quote, you can proceed with
 Activate your policy: After finalizing your application, your insurance policy will be activated, and you'll be well on your way to enjoying comprehensive loan insurance coverage.
 Why Choose Pandassur?
 
-## There are numerous reasons to choose Pandassur for your loan insurance needs. Here are just a few:
+## There are numerous reasons to choose Pandassur for your loan insurance needs:
 
 **Save money**: By using [Pandassur.fr](https://www.pandassur.fr), you could potentially save up to 15,000 euros on your insurance premiums over the life of your loan. Who wouldn't want to keep that extra cash in their pocket?
 **Better coverage**: [Pandassur.fr](https://www.pandassur.fr) works with a wide range of insurance providers to ensure that you have access to better coverage options than those offered by traditional banks.
