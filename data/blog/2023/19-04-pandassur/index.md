@@ -2,7 +2,7 @@
 title: Launch of pandassur.fr 
 posttype: blog
 date: 2023-04-19
-summary: Welcome to the world of Pandassur, a groundbreaking loan insurance broker in France that aims to make the process of obtaining insurance more accessible, affordable, and convenient for all customers. If you've been searching for a way to save money on your insurance premiums without compromising on coverage, Pandassur.fr is the answer you've been waiting for
+summary: Welcome to Pandassur, a groundbreaking loan insurance broker in France that aims to make the process of obtaining insurance more accessible, affordable, and convenient for all customers. If you've been searching for a way to save money on your insurance premiums without compromising on coverage, Pandassur.fr is the answer you've been waiting for.
 published: true
 cover: ./cover.jpeg
 category: Business
