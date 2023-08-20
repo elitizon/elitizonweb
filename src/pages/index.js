@@ -32,27 +32,29 @@ export default (props) => {
         buttonRounded={false}
         primaryButtonText="Discover our mission"
         imageFluid={data.image1.childImageSharp.fluid}
-        imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
+        imageSrc="images/a-engineering.jpg"
         imageShadow={false}
         imageCss="hover:scale-150 transition duration-300 transform ease-in-out"
         primaryButtonUrl="/OurMission"
       />
       <MainFeature1
-        subheading={<Subheading>From Zero to One</Subheading>}
-        heading={<>Where Elite Companies Are Forged 🔥</>}
+        subheading={<Subheading>Data & AI Innovation</Subheading>}
+        heading={<>Revolutionizing Industries</>}
         description={
           <>
-            We leverage <StrongText>specific knownledge</StrongText>, <StrongText>teams</StrongText> and <StrongText>capital</StrongText> to build and launch
-            successful <StrongText>product companies</StrongText>.
+            We <StrongText>leverage data & AI</StrongText> to{" "}
+            <StrongText>gain insights</StrongText>,{" "}
+            <StrongText>revolutionize products</StrongText>, and{" "}
+            <StrongText>reshape industries</StrongText>.
           </>
         }
         buttonRounded={false}
         primaryButtonText={false && <>Our process</>}
-        imageSrc="https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
+        imageSrc="images/blue-ocean.jpg"
         imageFluid={data.image2.childImageSharp.fluid}
         textOnLeft={false}
         primaryButtonUrl="/#"
-      />
+      />{" "}
       {false && (
         <Features
           subheading={<Subheading>Our Values</Subheading>}
@@ -63,20 +65,20 @@ export default (props) => {
               image: <SupportIconImage />,
               title: "24/7 Support",
               description:
-                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
+                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
             },
             {
               image: <ShieldIconImage />,
               title: "Strong Teams",
               description:
-                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
+                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
             },
             {
               image: <CustomizeIconImage />,
               title: "Customer Satisfaction",
               description:
-                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
-            },
+                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
+            }
           ]}
           linkText=""
         />
@@ -88,14 +90,14 @@ export default (props) => {
 
 export const query = graphql`
   query SITE_HOME_QUERY {
-    image2: file(relativePath: { eq: "photo-computer-code1.jpg" }) {
+    image2: file(relativePath: { eq: "blue-ocean.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 780) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    image1: file(relativePath: { eq: "photo-computer-on-table1.jpg" }) {
+    image1: file(relativePath: { eq: "ai-engineering.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 780) {
           ...GatsbyImageSharpFluid

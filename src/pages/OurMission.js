@@ -132,7 +132,7 @@ const ModuleLaunch = () => (
     description={
       <Content>
         <p>
-          We form a product team and we start an{" "}
+          We form a product/service team and we start an{" "}
           <FocusContent>iterative development process</FocusContent>. The sooner
           we can launch the better.
         </p>
@@ -145,8 +145,7 @@ const ModuleLaunch = () => (
           <span>
             If we measure high traction we{" "}
             <FocusContent>leverage capital</FocusContent> to accelerate the
-            growth. We incorporate the product team into a new company and we
-            open the capital to Venture Funds for a Serie-A.
+            growth. We incorporate the product team into a new company.
           </span>
         </p>
       </Content>
