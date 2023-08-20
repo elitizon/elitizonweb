@@ -20,12 +20,12 @@ export default (props) => {
       <MainFeature1
         noanimation
         subheading={<Subheading>Technology Venture Studio</Subheading>}
-        heading="We launch 🚀 innovative products."
+        heading="We launch 🚀 innovative services."
         description={
           <>
             As a technology venture studio we transform{" "}
             <StrongText>ideas</StrongText> into{" "}
-            <StrongText>products</StrongText> and products into{" "}
+            <StrongText>services</StrongText> and services into{" "}
             <StrongText>companies</StrongText>.
           </>
         }
