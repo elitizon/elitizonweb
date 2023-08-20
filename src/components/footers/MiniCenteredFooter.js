@@ -53,7 +53,7 @@ export default () => {
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
-            &copy; Copyright 2020, elitizon ltd All Rights Reserved.
+            &copy; Copyright 2023, elitizon ltd All Rights Reserved.
           </CopyrightText>
         </Row>
       </Content>
