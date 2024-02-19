@@ -95,11 +95,11 @@ module.exports = {
         ]
       }
     },
-    {
+/*    {
       // Get all the MDX file for the blog
       resolve: `gatsby-source-filesystem`,
       options: { path: `${__dirname}/data/blog`, name: `post` }
-    },
+    },*/
     {
       // Get all the MDX file for the  pages
       resolve: `gatsby-source-filesystem`,
