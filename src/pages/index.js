@@ -19,22 +19,34 @@ export default (props) => {
     <Page {...props}>
       <MainFeature1
         noanimation
-        subheading={<Subheading>Technology Venture Studio</Subheading>}
-        heading="We launch 🚀 innovative services."
+        subheading={
+          <Subheading>
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              The Vertical AI Sovereignty Protocol
+            </span>
+          </Subheading>
+        }
+        heading="Unlock Your Vertical’s AI Potential"
         description={
           <>
-            As a technology venture studio we transform{" "}
-            <StrongText>ideas</StrongText> into{" "}
-            <StrongText>services</StrongText> and services into{" "}
-            <StrongText>companies</StrongText>.
+            <p className="text-xl font-bold tracking-wide leading-relaxed text-gray-800 mb-4">
+              Turn Domain Expertise into an Unstoppable Advantage
+            </p>
+            87% of industries will face AI-powered disruption by 2026. We arm leaders with{" "}
+            <StrongText>Vertical AI Agents</StrongText> that:<br />
+            <span className="block mt-4">
+              ▸ <StrongText>Lock</StrongText> your IP into self-reinforcing market dominance<br />
+              ▸ <StrongText>Outpace</StrongText> copycats with algorithmic moats<br />
+              ▸ <StrongText>Rewrite</StrongText> industry rules in your favor
+            </span>
           </>
         }
         buttonRounded={false}
-        primaryButtonText="Discover our mission"
+        primaryButtonText="Claim Your AI Sovereignty →"
         imageFluid={data.image1.childImageSharp.fluid}
         imageSrc="images/a-engineering.jpg"
         imageShadow={false}
-        imageCss="hover:scale-150 transition duration-300 transform ease-in-out"
+        imageCss="hover:scale-105 transition-transform duration-500 ease-out-expo"
         primaryButtonUrl="/OurMission"
       />
       <MainFeature1
