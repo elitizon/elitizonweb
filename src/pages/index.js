@@ -122,6 +122,59 @@ export default (props) => {
         primaryButtonUrl="/#"
       />
       <div tw="mt-20"></div>
+      <section className="max-w-screen-xl mx-auto my-16 px-4">
+        <div className="text-center mb-12">
+          <h3 className="text-4xl font-extrabold mb-4 text-gray-900">
+            ELITZON’s Vertical AI Advantage
+          </h3>
+          <p className="text-xl font-semibold text-gray-700">
+            From Expertise to Execution
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+          <div>
+            <h4 className="text-2xl font-bold text-gray-800 mb-3">
+              For Established Enterprises
+            </h4>
+            <ul className="list-disc ml-8 space-y-3 text-lg text-gray-600">
+              <li>
+                <span className="font-semibold">AI Agent Consulting & Development</span>:<br/>
+                ↳ Convert proprietary workflows into autonomous AI systems<br/>
+                ↳ Deploy market-specific agents in &lt;12 weeks
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-2xl font-bold text-gray-800 mb-3">
+              For Domain Experts &amp; Startups
+            </h4>
+            <ul className="list-disc ml-8 space-y-3 text-lg text-gray-600">
+              <li>
+                <span className="font-semibold">Co-Creation Partnerships</span>:<br/>
+                ↳ Jointly build vertical AI agents with our engineers<br/>
+                ↳ Shared revenue model: Earn 40-70% of agent-generated income<br/>
+                ↳ White-label solutions for rapid market entry
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="prose prose-lg mx-auto text-gray-700">
+          <h4 className="text-2xl font-bold mb-4 text-center md:text-left">
+            Platform Capabilities:
+          </h4>
+          <ul className="list-disc ml-8 space-y-2">
+            <li>
+              ✅ <span className="font-semibold">Vertical-Specific Training</span> – Deep-tune models using your proprietary data
+            </li>
+            <li>
+              ✅ <span className="font-semibold">Multi-Channel Monetization</span> – SaaS licensing, pay-per-use API, enterprise contracts
+            </li>
+            <li>
+              ✅ <span className="font-semibold">Compliance Engine</span> – Built-in regulatory adherence for your industry
+            </li>
+          </ul>
+        </div>
+      </section>
     </Page>
   )
 }
@@ -131,7 +184,7 @@ export const query = graphql`
     image2: file(relativePath: { eq: "blue-ocean.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 780) {
-          ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid
         }
       }
     }
