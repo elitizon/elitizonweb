@@ -10,6 +10,7 @@ const ImageContainer = styled(tw.div`rounded w-full h-full`)`
     ${tw`w-full h-full`} 
   }
 `
+
 export default (props) => {
   return (
     <Page {...props}>
