@@ -15,17 +15,19 @@
   },
   "scripts": {
     "start": "yarn dev",
-    "dev": "gatsby develop -p 9988 -o",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop -p 9988 -o",
     "devlocal": "gatsby develop -H 0.0.0.0 -p 8080",
-    "build": "gatsby build",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' gatsby build",
     "serve": "gatsby serve -p 9500 -o",
     "clean": "gatsby clean",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update-db": "npm install caniuse-lite@latest"
   },
   "keywords": [],
   "author": "Raphaël MANSUY",
   "license": "MIT",
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
     "babel-plugin-styled-components": "^1.11.1",
@@ -38,7 +40,7 @@
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^2.4.21",
     "gatsby-plugin-mdx": "^1.2.30",
-    "gatsby-plugin-postcss": "^2.3.11",
+    "gatsby-plugin-postcss": "^3.7.0",
     "gatsby-plugin-purgecss": "^5.0.0",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
@@ -68,15 +70,21 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^5.4.0",
-    "tailwindcss": "^1.7.3"
+    "@types/react": "^18.2.0",
+    "autoprefixer": "^10.4.20",
+    "jquery": "^3.7.1",
+    "postcss": "^8.5.1",
+    "react-is": "^18.2.0",
+    "tailwindcss": "^2.2.19"
   },
   "engines": {
-    "node": "16"
+    "node": ">=20"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "packageManager": "yarn@4.1.1+sha512.ec40d0639bb307441b945d9467139cbb88d14394baac760b52eca038b330d16542d66fef61574271534ace5a200518dabf3b53a85f1f9e4bfa37141b538a9590"
 }
