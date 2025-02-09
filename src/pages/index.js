@@ -80,7 +80,7 @@ export default (props) => {
                 imageSrc="images/quantalogic-01.jpg"
                 imageShadow={true}
                 imageCss="hover:scale-105 transition-transform duration-700 ease-out"
-                primaryButtonUrl="/our-mission"
+                primaryButtonUrl="/OurMission"
             />
             <section id="why" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
                 <div className="max-w-4xl mx-auto">
