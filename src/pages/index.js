@@ -33,13 +33,13 @@ export default (props) => {
           </Subheading>
         }
         heading={
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-gray-900">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight">
             Unlock Your Vertical's AI Potential
           </h1>
         }
         description={
           <>
-            <p className="text-2xl font-bold tracking-wide leading-relaxed text-gray-900 mb-6">
+            <p className="text-2xl font-bold tracking-wide leading-relaxed mb-6">
               Turn Domain Expertise into an Unstoppable Advantage
             </p>
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
@@ -120,28 +120,6 @@ export default (props) => {
         imageFluid={data.image2.childImageSharp.fluid}
         textOnLeft={false}
         primaryButtonUrl="/#"
-      />
-      <Features
-        subheading={<Subheading>Core Capabilities</Subheading>}
-        heading="Transform Your Industry"
-        description="Our platform provides the tools and expertise you need to maintain AI sovereignty in your vertical."
-        cards={[
-          {
-            imageSrc: SupportIconImage,
-            title: "Domain Expertise Capture",
-            description: "Convert tribal knowledge into structured AI models that grow stronger with use."
-          },
-          {
-            imageSrc: ShieldIconImage,
-            title: "AI Sovereignty Shield",
-            description: "Protect your competitive advantage with algorithmic moats and data flywheel effects."
-          },
-          {
-            imageSrc: CustomizeIconImage,
-            title: "Vertical Integration",
-            description: "Seamlessly integrate AI capabilities across your entire value chain."
-          }
-        ]}
       />
       <div tw="mt-20"></div>
     </Page>
