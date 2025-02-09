@@ -82,6 +82,83 @@ export default (props) => {
                 imageCss="hover:scale-105 transition-transform duration-700 ease-out"
                 primaryButtonUrl="/our-mission"
             />
+            <section id="why" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-5xl font-extrabold  mb-4 leading-tight">
+                            WHY Vertical AI Agents?
+                        </h2>
+                        <h3 className="text-2xl font-medium text-gray-600 mb-8">
+                            The Inevitable Shift in Competitive Advantage
+                        </h3>
+                        <div className="w-24 h-1 bg-primary-500 mx-auto"></div>
+                    </div>
+                    
+                    <div className="space-y-12">
+                        <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                            <p className="text-2xl font-bold  mb-6">
+                                Traditional businesses are collapsing.
+                            </p>
+                            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                                Legacy companies clinging to outdated models face extinction. Meanwhile, AI-first competitors are:
+                            </p>
+                            <ul className="space-y-6 ml-4">
+                                <li className="flex items-start group">
+                                    <span className="text-green-500 mr-4 text-2xl group-hover:scale-110 transition-transform">✅</span>
+                                    <span className="text-xl leading-tight">
+                                        <strong>Dominating markets</strong> by automating 80% of repetitive workflows
+                                    </span>
+                                </li>
+                                <li className="flex items-start group">
+                                    <span className="text-green-500 mr-4 text-2xl group-hover:scale-110 transition-transform">✅</span>
+                                    <span className="text-xl leading-tight">
+                                        <strong>Creating hyper-personalized services</strong> at scale
+                                    </span>
+                                </li>
+                                <li className="flex items-start group">
+                                    <span className="text-green-500 mr-4 text-2xl group-hover:scale-110 transition-transform">✅</span>
+                                    <span className="text-xl leading-tight">
+                                        <strong >Generating 24/7 revenue streams</strong> through AI-driven customer interactions
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                            <p className="text-2xl font-bold  mb-6">
+                                Your proprietary knowledge is the ultimate weapon – but only if weaponized.
+                            </p>
+                            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                                ELITIZON exists to help domain experts like you:
+                            </p>
+                            <ul className="space-y-6 ml-4">
+                                <li className="flex items-start group">
+                                    <span className="text-3xl mr-4 group-hover:scale-110 transition-transform">🔥</span>
+                                    <span className="text-xl leading-tight">
+                                        <strong >Crush generic AI solutions</strong> with vertical-specific agents
+                                    </span>
+                                </li>
+                                <li className="flex items-start group">
+                                    <span className="text-3xl mr-4 group-hover:scale-110 transition-transform">💡</span>
+                                    <span className="text-xl leading-tight">
+                                        <strong >Monetize your expertise</strong> through AI-as-a-Service models
+                                    </span>
+                                </li>
+                                <li className="flex items-start group">
+                                    <span className="text-3xl mr-4 group-hover:scale-110 transition-transform">🛡️</span>
+                                    <span className="text-xl leading-tight">
+                                        <strong >Build moats</strong> competitors can't replicate
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <blockquote className="bg-primary-50 border-l-8 border-primary-500 pl-8 py-6 pr-6 rounded-r-2xl text-2xl italic leading-relaxed">
+                            "The greatest risk isn't AI – it's being outpaced by those who harness it first."
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-gradient-to-b from-white to-gray-50">
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-16">
