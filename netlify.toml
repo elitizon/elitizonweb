@@ -1,10 +1,25 @@
 [build]
   command = "gatsby build"
   publish = "public"
-  environment = { NODE_VERSION = "18" }
+  functions = "functions"
+
+[build.environment]
+  NODE_VERSION = "18.12.0"
+  YARN_VERSION = "4.1.1"
+  YARN_FLAGS = "--no-ignore-optional"
+
+[context.production.environment]
+  NODE_ENV = "production"
+  GATSBY_ACTIVE_ENV = "production"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "development"
+  GATSBY_ACTIVE_ENV = "development"
 
 [[plugins]]
   package = "@netlify/plugin-gatsby"
 
-[build.environment]
-  GATSBY_CPU_COUNT = "2"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
