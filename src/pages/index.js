@@ -83,18 +83,39 @@ export default (props) => {
         primaryButtonUrl="/our-mission"
       />
       <MainFeature1
-        subheading={<Subheading>Data & AI Innovation</Subheading>}
-        heading={<>Revolutionizing Industries</>}
+        subheading={<Subheading>Why Vertical AI Agents?</Subheading>}
+        heading={<>For Innovators Who Refuse to Be Disrupted</>}
         description={
           <>
-            We <StrongText>leverage data & AI</StrongText> to{" "}
-            <StrongText>gain insights</StrongText>,{" "}
-            <StrongText>revolutionize products</StrongText>, and{" "}
-            <StrongText>reshape industries</StrongText>.
+            <ul className="space-y-5 list-none pl-0 mb-8">
+              <li className="flex items-center group">
+                <span className="mr-3 text-primary-600 text-xl transform group-hover:scale-110 transition-transform">▸</span>
+                <span className="text-lg">
+                  <StrongText className="font-semibold">Outpace Legacy Competitors:</StrongText>{" "}
+                  Convert your hard-won knowledge into AI systems that operate at unprecedented speed and precision
+                </span>
+              </li>
+              <li className="flex items-center group">
+                <span className="mr-3 text-primary-600 text-xl transform group-hover:scale-110 transition-transform">▸</span>
+                <span className="text-lg">
+                  <StrongText className="font-semibold">Monetize What You Know:</StrongText>{" "}
+                  Build recurring revenue streams from AI Agents that scale your expertise 24/7
+                </span>
+              </li>
+              <li className="flex items-center group">
+                <span className="mr-3 text-primary-600 text-xl transform group-hover:scale-110 transition-transform">▸</span>
+                <span className="text-lg">
+                  <StrongText className="font-semibold">Future-Proof Your Business:</StrongText>{" "}
+                  Create intelligent systems that evolve with your industry's needs
+                </span>
+              </li>
+            </ul>
+            <p className="text-xl italic text-gray-600 border-l-4 border-primary-500 pl-4">
+              "The greatest competitive risk isn't AI itself – it's watching others harness it first."
+            </p>
           </>
         }
         buttonRounded={false}
-        primaryButtonText={false && <>Our process</>}
         imageSrc="images/blue-ocean.jpg"
         imageFluid={data.image2.childImageSharp.fluid}
         textOnLeft={false}
