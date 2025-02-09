@@ -1,53 +1,86 @@
 import React from "react"
 import tw from "twin.macro"
 import { graphql } from "gatsby"
+import { ArrowRightIcon } from "@heroicons/react/24/solid"
+
+// Components
+import { Page } from "../components/Page"
 import MainFeature1 from "../components/features/TwoColWithButton.js"
 import Features from "../components/features/ThreeColSimple.js"
 
+// Images
 import SupportIconImage from "../images/support-icon.svg"
 import ShieldIconImage from "../images/shield-icon.svg"
 import CustomizeIconImage from "../images/customize-icon.svg"
 
-import { Page } from "../components/Page"
-
+// Styled Components
 const StrongText = tw.span`text-gray-800`
-
 const Subheading = tw.span`uppercase tracking-wider text-sm`
+
 export default (props) => {
   const { data } = props
   return (
-    <Page {...props}>
+    <Page 
+      {...props}
+      title="Elitizon - Vertical AI Sovereignty Protocol"
+      description="Transform your domain expertise into AI-powered market dominance"
+    >
       <MainFeature1
-        noanimation
+        noAnimation
         subheading={
-          <Subheading>
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              The Vertical AI Sovereignty Protocol
-            </span>
+          <Subheading aria-label="Vertical AI Sovereignty Protocol" className="text-primary-600 font-semibold">
+            The Vertical AI Sovereignty Protocol
           </Subheading>
         }
-        heading="Unlock Your Vertical’s AI Potential"
+        heading={
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-gray-900">
+            Unlock Your Vertical's AI Potential
+          </h1>
+        }
         description={
           <>
-            <p className="text-xl font-bold tracking-wide leading-relaxed text-gray-800 mb-4">
+            <p className="text-2xl font-bold tracking-wide leading-relaxed text-gray-900 mb-6">
               Turn Domain Expertise into an Unstoppable Advantage
             </p>
-            87% of industries will face AI-powered disruption by 2026. We arm leaders with{" "}
-            <StrongText>Vertical AI Agents</StrongText> that:<br />
-            <span className="block mt-4">
-              ▸ <StrongText>Lock</StrongText> your IP into self-reinforcing market dominance<br />
-              ▸ <StrongText>Outpace</StrongText> copycats with algorithmic moats<br />
-              ▸ <StrongText>Rewrite</StrongText> industry rules in your favor
-            </span>
+            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              <strong className="font-semibold">87% of industries</strong> will face AI-powered disruption by 2026. 
+              We arm leaders with{" "}
+              <StrongText aria-label="Vertical AI Agents" className="font-semibold">Vertical AI Agents</StrongText> that:
+            </p>
+            <ul className="space-y-5 list-none pl-0">
+              <li className="flex items-center group">
+                <span className="mr-3 text-primary-600 text-xl transform group-hover:scale-110 transition-transform">▸</span>
+                <span className="text-lg">
+                  <StrongText className="font-semibold">Lock</StrongText> your IP into self-reinforcing market dominance
+                </span>
+              </li>
+              <li className="flex items-center group">
+                <span className="mr-3 text-primary-600 text-xl transform group-hover:scale-110 transition-transform">▸</span>
+                <span className="text-lg">
+                  <StrongText className="font-semibold">Outpace</StrongText> copycats with algorithmic moats
+                </span>
+              </li>
+              <li className="flex items-center group">
+                <span className="mr-3 text-primary-600 text-xl transform group-hover:scale-110 transition-transform">▸</span>
+                <span className="text-lg">
+                  <StrongText className="font-semibold">Rewrite</StrongText> industry rules in your favor
+                </span>
+              </li>
+            </ul>
           </>
         }
         buttonRounded={false}
-        primaryButtonText="Claim Your AI Sovereignty →"
+        primaryButtonText={
+          <span className="inline-flex items-center text-lg font-semibold tracking-wide hover:translate-x-1 transition-transform">
+            Claim Your AI Sovereignty 
+            <ArrowRightIcon className="ml-3 w-5 h-5" aria-hidden="true" />
+          </span>
+        }
         imageFluid={data.image1.childImageSharp.fluid}
-        imageSrc="images/a-engineering.jpg"
-        imageShadow={false}
-        imageCss="hover:scale-105 transition-transform duration-500 ease-out-expo"
-        primaryButtonUrl="/OurMission"
+        imageSrc="images/quantalogic-01.jpg"
+        imageShadow={true}
+        imageCss="hover:scale-105 transition-transform duration-700 ease-out"
+        primaryButtonUrl="/our-mission"
       />
       <MainFeature1
         subheading={<Subheading>Data & AI Innovation</Subheading>}
@@ -66,35 +99,29 @@ export default (props) => {
         imageFluid={data.image2.childImageSharp.fluid}
         textOnLeft={false}
         primaryButtonUrl="/#"
-      />{" "}
-      {false && (
-        <Features
-          subheading={<Subheading>Our Values</Subheading>}
-          heading="We follow these."
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          cards={[
-            {
-              image: <SupportIconImage />,
-              title: "24/7 Support",
-              description:
-                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
-            },
-            {
-              image: <ShieldIconImage />,
-              title: "Strong Teams",
-              description:
-                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
-            },
-            {
-              image: <CustomizeIconImage />,
-              title: "Customer Satisfaction",
-              description:
-                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
-            }
-          ]}
-          linkText=""
-        />
-      )}
+      />
+      <Features
+        subheading={<Subheading>Core Capabilities</Subheading>}
+        heading="Transform Your Industry"
+        description="Our platform provides the tools and expertise you need to maintain AI sovereignty in your vertical."
+        cards={[
+          {
+            imageSrc: SupportIconImage,
+            title: "Domain Expertise Capture",
+            description: "Convert tribal knowledge into structured AI models that grow stronger with use."
+          },
+          {
+            imageSrc: ShieldIconImage,
+            title: "AI Sovereignty Shield",
+            description: "Protect your competitive advantage with algorithmic moats and data flywheel effects."
+          },
+          {
+            imageSrc: CustomizeIconImage,
+            title: "Vertical Integration",
+            description: "Seamlessly integrate AI capabilities across your entire value chain."
+          }
+        ]}
+      />
       <div tw="mt-20"></div>
     </Page>
   )

@@ -17,7 +17,7 @@
     "start": "yarn dev",
     "dev": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop -p 9988 -o",
     "devlocal": "gatsby develop -H 0.0.0.0 -p 8080",
-    "build": "gatsby build",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' gatsby build",
     "serve": "gatsby serve -p 9500 -o",
     "clean": "gatsby clean",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,6 +26,7 @@
   "author": "Raphaël MANSUY",
   "license": "MIT",
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
     "babel-plugin-styled-components": "^1.11.1",
