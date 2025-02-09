@@ -135,9 +135,9 @@ export default () => {
         <Divider />
         <CopyrightAndCompanyInfoRow>
           <CopyrightNotice>
-            &copy; Copyright 2023, elitizon ltd.
+            &copy; Copyright 2025, elitizon ltd.
           </CopyrightNotice>
-          <CompanyInfo>An Internet Company.</CompanyInfo>
+          <CompanyInfo>The Vertical AI Agents - Company.</CompanyInfo>
         </CopyrightAndCompanyInfoRow>
       </Content>
     </Container>

@@ -226,7 +226,7 @@ export default () => {
             <LogoText>elitizon ltd.</LogoText>
           </LogoContainer>
           <CopywrightNotice>
-            &copy; 2023 elitizon ltd. All Rights Reserved.
+            &copy; 2025 elitizon ltd. All Rights Reserved.
           </CopywrightNotice>
           <SocialLinksContainer>
             {githubPage && (

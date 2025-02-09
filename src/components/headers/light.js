@@ -93,7 +93,7 @@ export default ({
   const defaultLinks = [
     <NavLinks key={1} role="navigation" aria-label="main navigation"> 
       <NavLink to="/#">Home</NavLink>
-      <NavLink to="/OurMission">Mission</NavLink>
+      <NavLink to="/OurOffer">Offer</NavLink>
       {false && <NavLink to="/Blog">Blog</NavLink> }
       <NavLink to="/ContactUs">Contact Us</NavLink>
       {false && (

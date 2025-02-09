@@ -80,9 +80,9 @@ export default (props) => {
                 imageSrc="images/quantalogic-01.jpg"
                 imageShadow={true}
                 imageCss="hover:scale-105 transition-transform duration-700 ease-out"
-                primaryButtonUrl="/our-mission"
+                primaryButtonUrl="/ContactUs"
             />
-            <section id="why" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <section id="why" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-gray-100">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-5xl font-extrabold  mb-4 leading-tight">
@@ -159,13 +159,13 @@ export default (props) => {
                     </div>
                 </div>
             </section>
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-gradient-to-b from-white to-gray-50">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-gradient-to-b from-white to-gray-50 border-t border-gray-100">
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-16">
                         <Subheading className="text-primary-600 font-semibold block mb-3">
                             Why Vertical AI Agents?
                         </Subheading>
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-8">
+                        <h2 className="text-4xl md:text-5xl font-extrabold  leading-tight mb-8">
                             For Innovators Who Refuse to Be Disrupted
                         </h2>
                         <div className="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
@@ -174,7 +174,7 @@ export default (props) => {
                     <div className="space-y-12">
                         <div className="transform hover:-translate-y-1 transition-transform duration-300">
                             <div className="p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                                <h3 className="text-2xl font-bold  mb-4 flex items-center">
                                     <span className="text-primary-600 mr-4 text-3xl">01</span>
                                     Outpace Legacy Competitors
                                 </h3>
@@ -186,7 +186,7 @@ export default (props) => {
 
                         <div className="transform hover:-translate-y-1 transition-transform duration-300">
                             <div className="p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                                <h3 className="text-2xl font-bold  mb-4 flex items-center">
                                     <span className="text-primary-600 mr-4 text-3xl">02</span>
                                     Monetize What You Know
                                 </h3>
@@ -198,7 +198,7 @@ export default (props) => {
 
                         <div className="transform hover:-translate-y-1 transition-transform duration-300">
                             <div className="p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                                <h3 className="text-2xl font-bold  mb-4 flex items-center">
                                     <span className="text-primary-600 mr-4 text-3xl">03</span>
                                     Future-Proof Your Business
                                 </h3>
@@ -209,7 +209,7 @@ export default (props) => {
                         </div>
 
                         <div className="mt-16 px-8 py-12 bg-primary-50 rounded-xl">
-                            <blockquote className="text-2xl font-medium text-gray-900 text-center italic">
+                            <blockquote className="text-2xl font-medium  text-center italic">
                                 "The greatest competitive risk isn't AI itself – it's watching others harness it first."
                                 <footer className="mt-4 text-primary-600 font-semibold text-lg">
                                     Industry Insight
@@ -220,12 +220,12 @@ export default (props) => {
                 </div>
             </section>
             <div tw="mt-20"></div>
-            <section className="max-w-screen-xl mx-auto my-24 px-4">
+            <section className="max-w-screen-xl mx-auto my-24 px-4 border-t border-gray-100">
                 <div className="text-center mb-16">
                     <span className="text-primary-600 font-semibold tracking-wide uppercase mb-3 block">
                         Vertical AI Solutions
                     </span>
-                    <h3 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 leading-tight">
+                    <h3 className="text-4xl md:text-5xl font-extrabold mb-6  leading-tight">
                         ELITZON's Vertical AI Advantage
                     </h3>
                     <p className="text-xl md:text-2xl font-medium text-gray-600 max-w-3xl mx-auto">
@@ -235,7 +235,7 @@ export default (props) => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
                     <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h4 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h4 className="text-2xl font-bold  mb-6 flex items-center">
                             <span className="text-primary-600 mr-3 text-3xl">①</span>
                             For Established Enterprises
                         </h4>
@@ -255,7 +255,7 @@ export default (props) => {
                     </div>
 
                     <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h4 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h4 className="text-2xl font-bold  mb-6 flex items-center">
                             <span className="text-primary-600 mr-3 text-3xl">②</span>
                             For Domain Experts &amp; Startups
                         </h4>
@@ -280,7 +280,7 @@ export default (props) => {
                 </div>
 
                 <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 shadow-lg">
-                    <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                    <h4 className="text-2xl font-bold  mb-8 text-center">
                         Platform Capabilities
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
