@@ -1,0 +1,10 @@
+[build]
+  command = "gatsby build"
+  publish = "public"
+  environment = { NODE_VERSION = "18" }
+
+[[plugins]]
+  package = "@netlify/plugin-gatsby"
+
+[build.environment]
+  GATSBY_CPU_COUNT = "2"

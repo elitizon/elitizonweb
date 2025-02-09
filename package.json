@@ -17,7 +17,7 @@
     "start": "yarn dev",
     "dev": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop -p 9988 -o",
     "devlocal": "gatsby develop -H 0.0.0.0 -p 8080",
-    "build": "NODE_OPTIONS='--openssl-legacy-provider' gatsby build",
+    "build": "gatsby build",
     "serve": "gatsby serve -p 9500 -o",
     "clean": "gatsby clean",
     "test": "echo \"Error: no test specified\" && exit 1",
