@@ -43,7 +43,7 @@ export default (props) => {
                             Transform Your Expertise into Unstoppable Vertical AI Agents
                         </p>
                         <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                            <strong className="font-semibold">87% of industries</strong> will face AI-powered disruption by 2026.
+                            <strong className="font-semibold">79% of industry leaders</strong> report AI adoption as critical for maintaining competitive advantage by 2025 (McKinsey & Company, 2024).
                             We arm leaders with{" "}
                             <StrongText aria-label="Vertical AI Agents" className="font-semibold">Vertical AI Agents</StrongText> that:
                         </p>
