@@ -82,97 +82,153 @@ export default (props) => {
         imageCss="hover:scale-105 transition-transform duration-700 ease-out"
         primaryButtonUrl="/our-mission"
       />
-      <MainFeature1
-        subheading={<Subheading>Why Vertical AI Agents?</Subheading>}
-        heading={<>For Innovators Who Refuse to Be Disrupted</>}
-        description={
-          <>
-            <ul className="space-y-5 list-none pl-0 mb-8">
-              <li className="flex items-center group">
-                <span className="mr-3 text-primary-600 text-xl transform group-hover:scale-110 transition-transform">▸</span>
-                <span className="text-lg">
-                  <StrongText className="font-semibold">Outpace Legacy Competitors:</StrongText>{" "}
-                  Convert your hard-won knowledge into AI systems that operate at unprecedented speed and precision
-                </span>
-              </li>
-              <li className="flex items-center group">
-                <span className="mr-3 text-primary-600 text-xl transform group-hover:scale-110 transition-transform">▸</span>
-                <span className="text-lg">
-                  <StrongText className="font-semibold">Monetize What You Know:</StrongText>{" "}
-                  Build recurring revenue streams from AI Agents that scale your expertise 24/7
-                </span>
-              </li>
-              <li className="flex items-center group">
-                <span className="mr-3 text-primary-600 text-xl transform group-hover:scale-110 transition-transform">▸</span>
-                <span className="text-lg">
-                  <StrongText className="font-semibold">Future-Proof Your Business:</StrongText>{" "}
-                  Create intelligent systems that evolve with your industry's needs
-                </span>
-              </li>
-            </ul>
-            <p className="text-xl italic text-gray-600 border-l-4 border-primary-500 pl-4">
-              "The greatest competitive risk isn't AI itself – it's watching others harness it first."
-            </p>
-          </>
-        }
-        buttonRounded={false}
-        imageSrc="images/blue-ocean.jpg"
-        imageFluid={data.image2.childImageSharp.fluid}
-        textOnLeft={false}
-        primaryButtonUrl="/#"
-      />
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <Subheading className="text-primary-600 font-semibold block mb-3">
+              Why Vertical AI Agents?
+            </Subheading>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-8">
+              For Innovators Who Refuse to Be Disrupted
+            </h2>
+            <div className="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
+          </div>
+
+          <div className="space-y-12">
+            <div className="transform hover:-translate-y-1 transition-transform duration-300">
+              <div className="p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                  <span className="text-primary-600 mr-4 text-3xl">01</span>
+                  Outpace Legacy Competitors
+                </h3>
+                <p className="text-xl text-gray-600 leading-relaxed pl-12">
+                  Convert your hard-won knowledge into AI systems that operate at unprecedented speed and precision, leaving traditional approaches behind.
+                </p>
+              </div>
+            </div>
+
+            <div className="transform hover:-translate-y-1 transition-transform duration-300">
+              <div className="p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                  <span className="text-primary-600 mr-4 text-3xl">02</span>
+                  Monetize What You Know
+                </h3>
+                <p className="text-xl text-gray-600 leading-relaxed pl-12">
+                  Build recurring revenue streams from AI Agents that scale your expertise 24/7, turning your knowledge into a sustainable competitive advantage.
+                </p>
+              </div>
+            </div>
+
+            <div className="transform hover:-translate-y-1 transition-transform duration-300">
+              <div className="p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                  <span className="text-primary-600 mr-4 text-3xl">03</span>
+                  Future-Proof Your Business
+                </h3>
+                <p className="text-xl text-gray-600 leading-relaxed pl-12">
+                  Create intelligent systems that evolve with your industry's needs, ensuring long-term relevance and growth.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-16 px-8 py-12 bg-primary-50 rounded-xl">
+              <blockquote className="text-2xl font-medium text-gray-900 text-center italic">
+                "The greatest competitive risk isn't AI itself – it's watching others harness it first."
+                <footer className="mt-4 text-primary-600 font-semibold text-lg">
+                  Industry Insight
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
       <div tw="mt-20"></div>
-      <section className="max-w-screen-xl mx-auto my-16 px-4">
-        <div className="text-center mb-12">
-          <h3 className="text-4xl font-extrabold mb-4 text-gray-900">
-            ELITZON’s Vertical AI Advantage
+      <section className="max-w-screen-xl mx-auto my-24 px-4">
+        <div className="text-center mb-16">
+          <span className="text-primary-600 font-semibold tracking-wide uppercase mb-3 block">
+            Vertical AI Solutions
+          </span>
+          <h3 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 leading-tight">
+            ELITZON's Vertical AI Advantage
           </h3>
-          <p className="text-xl font-semibold text-gray-700">
+          <p className="text-xl md:text-2xl font-medium text-gray-600 max-w-3xl mx-auto">
             From Expertise to Execution
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-          <div>
-            <h4 className="text-2xl font-bold text-gray-800 mb-3">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <h4 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <span className="text-primary-600 mr-3 text-3xl">①</span>
               For Established Enterprises
             </h4>
-            <ul className="list-disc ml-8 space-y-3 text-lg text-gray-600">
-              <li>
-                <span className="font-semibold">AI Agent Consulting & Development</span>:<br/>
-                ↳ Convert proprietary workflows into autonomous AI systems<br/>
-                ↳ Deploy market-specific agents in &lt;12 weeks
-              </li>
-            </ul>
+            <div className="space-y-4 text-lg text-gray-600">
+              <div className="font-semibold text-gray-800 mb-4">AI Agent Consulting & Development</div>
+              <div className="pl-6 space-y-3">
+                <div className="flex items-baseline">
+                  <span className="text-primary-600 mr-2">↳</span>
+                  Convert proprietary workflows into autonomous AI systems
+                </div>
+                <div className="flex items-baseline">
+                  <span className="text-primary-600 mr-2">↳</span>
+                  Deploy market-specific agents in &lt;12 weeks
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <h4 className="text-2xl font-bold text-gray-800 mb-3">
+          
+          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <h4 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <span className="text-primary-600 mr-3 text-3xl">②</span>
               For Domain Experts &amp; Startups
             </h4>
-            <ul className="list-disc ml-8 space-y-3 text-lg text-gray-600">
-              <li>
-                <span className="font-semibold">Co-Creation Partnerships</span>:<br/>
-                ↳ Jointly build vertical AI agents with our engineers<br/>
-                ↳ Shared revenue model: Earn 40-70% of agent-generated income<br/>
-                ↳ White-label solutions for rapid market entry
-              </li>
-            </ul>
+            <div className="space-y-4 text-lg text-gray-600">
+              <div className="font-semibold text-gray-800 mb-4">Co-Creation Partnerships</div>
+              <div className="pl-6 space-y-3">
+                <div className="flex items-baseline">
+                  <span className="text-primary-600 mr-2">↳</span>
+                  Jointly build vertical AI agents with our engineers
+                </div>
+                <div className="flex items-baseline">
+                  <span className="text-primary-600 mr-2">↳</span>
+                  Shared revenue model: Earn 40-70% of agent-generated income
+                </div>
+                <div className="flex items-baseline">
+                  <span className="text-primary-600 mr-2">↳</span>
+                  White-label solutions for rapid market entry
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="prose prose-lg mx-auto text-gray-700">
-          <h4 className="text-2xl font-bold mb-4 text-center md:text-left">
-            Platform Capabilities:
+
+        <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 shadow-lg">
+          <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            Platform Capabilities
           </h4>
-          <ul className="list-disc ml-8 space-y-2">
-            <li>
-              ✅ <span className="font-semibold">Vertical-Specific Training</span> – Deep-tune models using your proprietary data
-            </li>
-            <li>
-              ✅ <span className="font-semibold">Multi-Channel Monetization</span> – SaaS licensing, pay-per-use API, enterprise contracts
-            </li>
-            <li>
-              ✅ <span className="font-semibold">Compliance Engine</span> – Built-in regulatory adherence for your industry
-            </li>
-          </ul>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex items-start space-x-3 p-4 rounded-lg hover:bg-white transition-colors duration-300">
+              <span className="text-green-500 text-xl">✅</span>
+              <div>
+                <span className="font-semibold block mb-2">Vertical-Specific Training</span>
+                <span className="text-gray-600">Deep-tune models using your proprietary data</span>
+              </div>
+            </div>
+            <div className="flex items-start space-x-3 p-4 rounded-lg hover:bg-white transition-colors duration-300">
+              <span className="text-green-500 text-xl">✅</span>
+              <div>
+                <span className="font-semibold block mb-2">Multi-Channel Monetization</span>
+                <span className="text-gray-600">SaaS licensing, pay-per-use API, enterprise contracts</span>
+              </div>
+            </div>
+            <div className="flex items-start space-x-3 p-4 rounded-lg hover:bg-white transition-colors duration-300">
+              <span className="text-green-500 text-xl">✅</span>
+              <div>
+                <span className="font-semibold block mb-2">Compliance Engine</span>
+                <span className="text-gray-600">Built-in regulatory adherence for your industry</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </Page>
