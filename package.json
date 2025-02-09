@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "yarn dev",
-    "dev": "gatsby develop -p 9988 -o",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop -p 9988 -o",
     "devlocal": "gatsby develop -H 0.0.0.0 -p 8080",
     "build": "gatsby build",
     "serve": "gatsby serve -p 9500 -o",
@@ -68,9 +68,9 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^5.4.0",
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.10",
-    "tailwindcss": "^2.1.2"
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^2.2.19"
   },
   "engines": {
     "node": "16"
@@ -80,5 +80,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "packageManager": "yarn@4.1.1+sha512.ec40d0639bb307441b945d9467139cbb88d14394baac760b52eca038b330d16542d66fef61574271534ace5a200518dabf3b53a85f1f9e4bfa37141b538a9590"
 }
