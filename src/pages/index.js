@@ -136,7 +136,7 @@ export const query = graphql`
         }
       }
     }
-    image1: file(relativePath: { eq: "ai-engineering.jpg" }) {
+    image1: file(relativePath: { eq: "quantalogic-01.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 780) {
           ...GatsbyImageSharpFluid

@@ -20,7 +20,8 @@
     "build": "NODE_OPTIONS='--openssl-legacy-provider' gatsby build",
     "serve": "gatsby serve -p 9500 -o",
     "clean": "gatsby clean",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update-db": "npm install caniuse-lite@latest"
   },
   "keywords": [],
   "author": "Raphaël MANSUY",
@@ -69,12 +70,15 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^5.4.0",
+    "@types/react": "^18.2.0",
     "autoprefixer": "^10.4.20",
+    "jquery": "^3.7.1",
     "postcss": "^8.5.1",
+    "react-is": "^18.2.0",
     "tailwindcss": "^2.2.19"
   },
   "engines": {
-    "node": "16"
+    "node": ">=20"
   },
   "browserslist": [
     ">0.2%",
