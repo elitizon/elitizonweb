@@ -7261,12 +7261,12 @@ __metadata:
   linkType: hard
 
 "dom-iterator@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "dom-iterator@npm:1.0.0"
+  version: 1.0.2
+  resolution: "dom-iterator@npm:1.0.2"
   dependencies:
     component-props: "npm:1.1.1"
     component-xor: "npm:0.0.4"
-  checksum: 10c0/7c4279e39f4249eb000766044b7545069c47ee51e360f517497edfbdab903934e6c2b24116a7f69806acd93078b9f50037d34ad6f663a7ee126e52040a40e193
+  checksum: 10c0/b623d0939ce263444fa6e9fb2d332363013561eb89bea02069b722cbaed0ade7795394e84a06aafcc9f3f5ea7e5f995509271a9a50655a1b4b6ba39261f1171d
   languageName: node
   linkType: hard
 
